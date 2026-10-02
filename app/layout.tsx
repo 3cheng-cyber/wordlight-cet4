@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./enrichment.css";
 
 export const metadata: Metadata = {
   title: "词间 · Wordlight | 四级单词，每次五分钟",

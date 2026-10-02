@@ -1,0 +1,882 @@
+{
+  "readings": [
+    {
+      "id": "reading-01",
+      "title": "小路与选择",
+      "titleEn": "The Smaller Path",
+      "theme": "选择",
+      "paragraphs": [
+        {
+          "en": "On Sunday morning, Lin stood at the park gate. One path was wide and busy. The other was narrow and quiet. She usually followed the crowd, but that day she chose the smaller path. Soon she heard birds above her and water behind the trees.",
+          "zh": "星期天早晨，林站在公园门口。一条路宽阔又热闹，另一条路狭窄而安静。她通常跟着人群走，但那天她选了那条小路。不久，她听见头顶的鸟鸣，还有树后的流水声。"
+        },
+        {
+          "en": "At a little bridge, she met an old man painting a blue boat. He smiled and moved his bag so she could sit down. Lin stayed for ten minutes. Nothing important seemed to happen, yet her mind became clear. A choice does not always need to change our whole life. Sometimes it simply gives us a chance to notice what we have been walking past.",
+          "zh": "在一座小桥边，她遇见一位老人，正在画一条蓝色的小船。他笑着挪开包，让她能够坐下。林停留了十分钟。似乎没有发生什么重要的事，她的思绪却清晰起来。一个选择并不总要改变我们的一生。有时候，它只是让我们有机会注意到那些一直与我们擦肩而过的事物。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "path",
+          "meaning": "小路；道路"
+        },
+        {
+          "word": "crowd",
+          "meaning": "人群"
+        },
+        {
+          "word": "choice",
+          "meaning": "选择"
+        },
+        {
+          "word": "chance",
+          "meaning": "机会"
+        },
+        {
+          "word": "notice",
+          "meaning": "注意到"
+        }
+      ],
+      "question": {
+        "question": "What did the smaller path give Lin?",
+        "options": [
+          "A faster way home.",
+          "A chance to notice new things.",
+          "A lesson in painting boats.",
+          "A plan to change her whole life."
+        ],
+        "answerIndex": 1,
+        "explanation": "小路让林听见鸟鸣和流水，遇见画画的老人，并注意到平时会错过的事物。文章没有说她学画画或决定改变一生。"
+      },
+      "writingPrompt": "Use 'choice' to write about one small decision you made today.",
+      "phrase": {
+        "phrase": "a chance to notice",
+        "translation": "一个留意到……的机会；可替换 notice 来表达做某事的机会"
+      }
+    },
+    {
+      "id": "reading-02",
+      "title": "候车的五分钟",
+      "titleEn": "Five Quiet Minutes",
+      "theme": "时间",
+      "paragraphs": [
+        {
+          "en": "Mei arrived at the bus stop five minutes early. Her first thought was to open a video app. Then she remembered the small word list in her pocket. She took it out and read three words. One was familiar, one was almost familiar, and one looked completely new.",
+          "zh": "梅提前五分钟到了公交车站。她首先想到的是打开视频软件。随后，她想起口袋里那张小小的单词表。她拿出来，读了三个词。一个很熟悉，一个似乎见过，还有一个完全陌生。"
+        },
+        {
+          "en": "She used the familiar word to describe the morning sky. For the new word, she made a simple sentence about the bus. When it arrived, she put the list away. She had not finished a great task, and she still had questions. But those five minutes now held something of her own. Time is not only a large empty box that we must fill. It is also a few small spaces where we can begin.",
+          "zh": "她用熟悉的那个词描写早晨的天空，又用新词写了一句关于公交车的简单句子。车来了，她收起单词表。她没有完成什么宏大的任务，也仍然有疑问，但这五分钟里有了属于她自己的东西。时间不只是一个等待我们填满的大空盒子，它也是一些可以让我们开始行动的小小空隙。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "familiar",
+          "meaning": "熟悉的"
+        },
+        {
+          "word": "describe",
+          "meaning": "描述"
+        },
+        {
+          "word": "simple",
+          "meaning": "简单的"
+        },
+        {
+          "word": "task",
+          "meaning": "任务"
+        },
+        {
+          "word": "space",
+          "meaning": "空间；空隙"
+        }
+      ],
+      "question": {
+        "question": "What is the main idea of the story?",
+        "options": [
+          "Every minute must be full of work.",
+          "New words should always describe buses.",
+          "A short wait can be a useful time to begin.",
+          "Watching videos is never enjoyable."
+        ],
+        "answerIndex": 2,
+        "explanation": "梅利用候车的几分钟完成了小练习，说明短暂的空闲也可以成为开始学习的机会。文章没有要求每一分钟都工作，也没有否定视频本身。"
+      },
+      "writingPrompt": "Use 'simple' to describe something useful you can do in five minutes.",
+      "phrase": {
+        "phrase": "a few small spaces",
+        "translation": "几个小小的空隙；a few 后接可数名词复数"
+      }
+    },
+    {
+      "id": "reading-03",
+      "title": "门边的杯子",
+      "titleEn": "The Cup by the Door",
+      "theme": "习惯",
+      "paragraphs": [
+        {
+          "en": "Jun often forgot to water the plant outside his room. He cared about it, but care alone did not make him remember. One evening, he put a blue cup beside his shoes. The next morning, he saw the cup as he was leaving. He filled it with water and gave the plant a drink.",
+          "zh": "俊常常忘记给房间外的植物浇水。他在意它，但光是在意并不能让他记住。一天晚上，他把一只蓝杯子放在鞋子旁边。第二天早上出门时，他看见了杯子。他装满水，给植物浇了水。"
+        },
+        {
+          "en": "After a week, the small action became part of his morning. The cup was not a magic answer. On busy days, he still forgot. Yet it made the next attempt easier. Jun began to understand a habit differently: it was not a daily test of strength. It was a path he could make easier to follow, one clear reminder at a time.",
+          "zh": "一周后，这个小动作成了他早晨生活的一部分。杯子并不是神奇的答案，忙碌时他仍然会忘记，但它让下一次尝试更容易了。俊开始用另一种方式理解习惯：它并不是每天对意志力的考验，而是一条可以通过一个个清晰提醒，变得更容易走下去的路。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "habit",
+          "meaning": "习惯"
+        },
+        {
+          "word": "plant",
+          "meaning": "植物"
+        },
+        {
+          "word": "care",
+          "meaning": "在意；关心"
+        },
+        {
+          "word": "attempt",
+          "meaning": "尝试"
+        },
+        {
+          "word": "strength",
+          "meaning": "力量；意志力"
+        }
+      ],
+      "question": {
+        "question": "Why did Jun put the cup beside his shoes?",
+        "options": [
+          "To give himself a clear reminder.",
+          "To keep his shoes clean.",
+          "To test the strength of the cup.",
+          "To stop himself from leaving home."
+        ],
+        "answerIndex": 0,
+        "explanation": "杯子放在出门会看到的地方，能提醒俊浇水。故事强调让行动更容易发生，而不是依靠意志力或惩罚。"
+      },
+      "writingPrompt": "Use 'habit' to write about a small action you want to repeat.",
+      "phrase": {
+        "phrase": "one clear reminder at a time",
+        "translation": "一次一个清晰提醒；one ... at a time 表示一次一个……"
+      }
+    },
+    {
+      "id": "reading-04",
+      "title": "先说出一句话",
+      "titleEn": "One Sentence First",
+      "theme": "自信",
+      "paragraphs": [
+        {
+          "en": "Before her first English club meeting, Yan wrote a sentence on a small card: 'I like walking when the city is quiet.' She wanted to say more, but every longer idea seemed difficult. At the meeting, she waited while other students spoke. Her hands felt cold when it was her turn.",
+          "zh": "第一次参加英语社团活动前，燕在小卡片上写了一句话：“我喜欢在城市安静的时候散步。”她想说得更多，但每一个更长的想法似乎都很难表达。活动中，她等着其他同学发言。轮到她时，她的手有些发凉。"
+        },
+        {
+          "en": "She read her sentence slowly. A boy across the table asked where she liked to walk. She knew the answer, so she told him about a river near her home. The conversation lasted only a minute. Still, the card felt less necessary afterward. Confidence had not arrived before she spoke. A small piece of it appeared while she was speaking, in a room where one simple sentence was enough to start.",
+          "zh": "她慢慢读出了那句话。桌子对面的一个男生问她喜欢去哪里散步。她知道答案，于是说起家附近的一条河。对话只持续了一分钟，不过，之后那张卡片似乎没那么必不可少了。自信并没有在她开口前到来，而是在她说话时出现了一小部分。在那个房间里，一句简单的话就足以开启交流。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "sentence",
+          "meaning": "句子"
+        },
+        {
+          "word": "difficult",
+          "meaning": "困难的"
+        },
+        {
+          "word": "conversation",
+          "meaning": "交谈"
+        },
+        {
+          "word": "necessary",
+          "meaning": "必要的"
+        },
+        {
+          "word": "confidence",
+          "meaning": "自信"
+        }
+      ],
+      "question": {
+        "question": "When did Yan begin to feel more confident?",
+        "options": [
+          "When she wrote a very long speech.",
+          "Before she entered the meeting room.",
+          "When all the other students left.",
+          "While she was taking part in the conversation."
+        ],
+        "answerIndex": 3,
+        "explanation": "结尾明确说，自信的一小部分是在她说话时出现的。她先用简单句开始交流，再逐渐感到不那么依赖卡片。"
+      },
+      "writingPrompt": "Use 'confidence' to write about one activity that helps you feel more confident.",
+      "phrase": {
+        "phrase": "enough to start",
+        "translation": "足以开始；enough to do 表示足够做某事，也可用于 adjective + enough to do 结构。"
+      }
+    },
+    {
+      "id": "reading-05",
+      "title": "一把橙色的伞",
+      "titleEn": "An Orange Umbrella",
+      "theme": "善意",
+      "paragraphs": [
+        {
+          "en": "Rain began just as Tao left the library. At the door, a girl was holding a paper bag over her head. Tao had a large orange umbrella. He asked if she was going toward the school gate. She nodded, and they walked together through the rain without saying very much.",
+          "zh": "涛离开图书馆时，雨刚好下起来。门口，一个女孩正把纸袋举在头顶。涛有一把橙色的大伞。他问她是不是往校门走。女孩点点头，两人便一起穿过雨幕，路上没说太多话。"
+        },
+        {
+          "en": "At the gate, she thanked him and ran to meet her brother. Tao never learned her name. Later, his friend asked what he had gained from helping a stranger. Tao looked at the wet edge of his sleeve. He had gained no prize and made no promise. He had simply shared a dry space for a few minutes. Kindness can be that ordinary: noticing a need and offering what we can spare.",
+          "zh": "到了校门口，她道了谢，跑去找哥哥。涛始终不知道她的名字。后来，朋友问他，帮助一个陌生人得到了什么。涛看着湿掉的袖口。他没有得到奖品，也没有作出承诺，只是把一小块干燥的空间分享了几分钟。善意可以如此平常：注意到一个需要，再拿出我们能够分享的东西。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "umbrella",
+          "meaning": "雨伞"
+        },
+        {
+          "word": "stranger",
+          "meaning": "陌生人"
+        },
+        {
+          "word": "prize",
+          "meaning": "奖品"
+        },
+        {
+          "word": "ordinary",
+          "meaning": "平常的"
+        },
+        {
+          "word": "spare",
+          "meaning": "抽出；匀出"
+        }
+      ],
+      "question": {
+        "question": "What does the story suggest about kindness?",
+        "options": [
+          "It should always lead to a new friendship.",
+          "It can be a small act with no reward.",
+          "It requires a promise from the other person.",
+          "It is useful only when others see it."
+        ],
+        "answerIndex": 1,
+        "explanation": "涛没有获得奖品，也没有和女孩建立后续关系，但分享雨伞仍然是一件有价值的小事。善意并不一定需要回报。"
+      },
+      "writingPrompt": "Use 'stranger' to write about a small way to help someone you do not know.",
+      "phrase": {
+        "phrase": "what we can spare",
+        "translation": "我们能够匀出的东西；what 在这里引导名词性从句"
+      }
+    },
+    {
+      "id": "reading-06",
+      "title": "窗外的一个问题",
+      "titleEn": "A Question on the Bus",
+      "theme": "好奇",
+      "paragraphs": [
+        {
+          "en": "On the way to school, Bo noticed that the same tree outside the bus window had begun to change color. One side was yellow, while the other was still green. He took a picture and wrote a question beneath it: 'Why do leaves on one tree change at different times?'",
+          "zh": "上学途中，博注意到公交车窗外那棵熟悉的树开始变色了。一侧已经发黄，另一侧仍然是绿色。他拍了张照片，在下面写了一个问题：“为什么同一棵树上的叶子会在不同时间变色？”"
+        },
+        {
+          "en": "At lunch, he searched for an answer. He found that several conditions could affect leaves, but his picture did not tell the whole story. That was fine. He planned to watch the tree again the next day. Curiosity did not give him a quick final answer. It gave him a reason to look more closely. The road was the same, yet his journey no longer felt quite the same.",
+          "zh": "午饭时，他查找答案。他发现，多种条件都可能影响树叶，但照片并不能说明全部情况。这也没关系。他打算第二天再观察那棵树。好奇心没有给他一个迅速而确定的最终答案，却给了他仔细观察的理由。道路没有变，他的这段路程却不再与以往完全相同。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "leaf",
+          "meaning": "叶子；复数为 leaves"
+        },
+        {
+          "word": "condition",
+          "meaning": "条件；状况"
+        },
+        {
+          "word": "affect",
+          "meaning": "影响"
+        },
+        {
+          "word": "reason",
+          "meaning": "理由"
+        },
+        {
+          "word": "journey",
+          "meaning": "旅程；路程"
+        }
+      ],
+      "question": {
+        "question": "What did Bo decide to do after his search?",
+        "options": [
+          "Give up because he found no information.",
+          "Take a different road to school.",
+          "Observe the tree again the next day.",
+          "Decide that every tree changes in the same way."
+        ],
+        "answerIndex": 2,
+        "explanation": "博发现照片不足以解释全部情况，于是计划第二天继续观察。文章强调，好奇心能让人持续注意身边的事物。"
+      },
+      "writingPrompt": "Use 'reason' to explain why you want to learn about something around you.",
+      "phrase": {
+        "phrase": "a reason to look more closely",
+        "translation": "一个更仔细观察的理由；a reason to do 表示做某事的理由"
+      }
+    },
+    {
+      "id": "reading-07",
+      "title": "没有放稳的书架",
+      "titleEn": "The Uneven Shelf",
+      "theme": "失败",
+      "paragraphs": [
+        {
+          "en": "Wei built a small shelf for his desk. When he placed three books on it, they slowly slid to one side. He felt disappointed and wanted to hide the shelf under his bed. His sister looked at it and asked, 'Which part is lower?' Together they measured the two sides.",
+          "zh": "伟给自己的书桌做了一个小书架。放上三本书后，书慢慢滑向了一边。他很失望，想把书架藏到床底下。姐姐看了看，问：“哪一边比较低？”他们一起量了量两侧。"
+        },
+        {
+          "en": "One piece of wood was shorter than the other. Wei added a thin block beneath it, and the books stayed still. The shelf was not beautiful, but it worked. His mistake had become useful information once he looked at it carefully. A failure can feel like a judgment about the person we are. Sometimes, however, it is a much smaller message: measure this part again, change one step, and see what happens.",
+          "zh": "一块木板比另一块短。伟在下面加了一个薄木块，书终于放稳了。书架算不上漂亮，但能用了。当他仔细看待这个错误时，错误就成了有用的信息。失败有时像是在对“我们是怎样的人”作出评判。但有时，它传达的只是一个小得多的信息：再量一量这里，改一个步骤，然后看看会怎样。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "shelf",
+          "meaning": "架子"
+        },
+        {
+          "word": "measure",
+          "meaning": "测量"
+        },
+        {
+          "word": "mistake",
+          "meaning": "错误"
+        },
+        {
+          "word": "failure",
+          "meaning": "失败"
+        },
+        {
+          "word": "information",
+          "meaning": "信息"
+        }
+      ],
+      "question": {
+        "question": "How did Wei make the shelf useful?",
+        "options": [
+          "He found a specific problem and made a small change.",
+          "He hid it until his disappointment disappeared.",
+          "He bought fewer books for his desk.",
+          "He decided that appearance mattered more than use."
+        ],
+        "answerIndex": 0,
+        "explanation": "伟和姐姐量出了两侧高度的差异，并加了一块薄木块。他把笼统的失望转化为具体问题，再作出小调整。"
+      },
+      "writingPrompt": "Use 'mistake' to write about something you learned from a small error.",
+      "phrase": {
+        "phrase": "change one step",
+        "translation": "改变一个步骤；可用于描述改进学习或做事的方法"
+      }
+    },
+    {
+      "id": "reading-08",
+      "title": "桌上的一扇窗",
+      "titleEn": "One Open Window",
+      "theme": "注意力",
+      "paragraphs": [
+        {
+          "en": "Ning sat down to read an English page. A message appeared on her phone, then a short video, then another message. After twenty minutes, she was still on the first paragraph. She was tired, although she had hardly read anything. She placed the phone in a drawer and opened the page again.",
+          "zh": "宁坐下来，准备读一页英语。手机上先出现一条消息，接着是一段短视频，然后又是一条消息。二十分钟后，她还停在第一段。她几乎没读进去什么，却已经有些累了。她把手机放进抽屉，再次翻开那一页。"
+        },
+        {
+          "en": "This time she read for five minutes and underlined one useful phrase. The room had not become silent; a bus passed outside and someone laughed in the hall. But she had fewer things asking for her attention. She imagined her mind as a room with many windows. For a little while, she could close some of them and let the light from one window reach the desk.",
+          "zh": "这一次，她读了五分钟，画出一个实用短语。房间并没有变得无声：公交车从外面驶过，走廊里有人发笑。但争夺她注意力的东西少了。她把头脑想象成一间有许多窗户的房间。在这短短一会儿，她可以关上其中几扇，让一扇窗的光照到桌面上。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "paragraph",
+          "meaning": "段落"
+        },
+        {
+          "word": "drawer",
+          "meaning": "抽屉"
+        },
+        {
+          "word": "phrase",
+          "meaning": "短语"
+        },
+        {
+          "word": "attention",
+          "meaning": "注意力"
+        },
+        {
+          "word": "imagine",
+          "meaning": "想象"
+        }
+      ],
+      "question": {
+        "question": "Why was Ning able to read more the second time?",
+        "options": [
+          "The whole building became silent.",
+          "The English page became much shorter.",
+          "She read all the messages first.",
+          "She reduced the things competing for her attention."
+        ],
+        "answerIndex": 3,
+        "explanation": "外界仍有声音，但宁把手机收起来，减少了分散注意力的内容。文章中的“关上几扇窗”也是这一做法的比喻。"
+      },
+      "writingPrompt": "Use 'attention' to describe something that helps you focus while studying.",
+      "phrase": {
+        "phrase": "for a little while",
+        "translation": "短暂地；一小会儿"
+      }
+    },
+    {
+      "id": "reading-09",
+      "title": "口袋里的钥匙",
+      "titleEn": "A Key in the Pocket",
+      "theme": "自由",
+      "paragraphs": [
+        {
+          "en": "When Lan moved into her first room away from home, she loved carrying her own key. She could return late, leave dishes on the table, and decide what to eat. For three days, this freedom felt wonderful. By the fourth evening, the room was untidy and she could not find a clean cup.",
+          "zh": "岚第一次搬进离家独住的房间时，很喜欢随身带着自己的钥匙。她可以晚点回来，把碗碟留在桌上，也可以自己决定吃什么。前三天，这种自由让她感觉很棒。到了第四天晚上，房间已经乱了，她找不到一只干净的杯子。"
+        },
+        {
+          "en": "She washed the dishes and made a short plan for the next morning. No one had ordered her to do it. She wanted a room that supported the life she had chosen. The key still meant freedom, but its meaning had grown. Being free was not only having fewer rules. It also meant taking responsibility for the small conditions that made her choices possible, including a clean cup for tomorrow's tea.",
+          "zh": "她洗了碗碟，给第二天早晨列了一个简短计划。没有人命令她这样做，她只是希望房间能支持自己选择的生活。钥匙仍然意味着自由，但它的含义变得更丰富了。自由不仅是规则少一些，也意味着为那些让选择成为可能的小条件负责，其中就包括为明天的茶准备一只干净杯子。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "freedom",
+          "meaning": "自由"
+        },
+        {
+          "word": "decide",
+          "meaning": "决定"
+        },
+        {
+          "word": "support",
+          "meaning": "支持"
+        },
+        {
+          "word": "rule",
+          "meaning": "规则"
+        },
+        {
+          "word": "responsibility",
+          "meaning": "责任"
+        }
+      ],
+      "question": {
+        "question": "How did Lan's idea of freedom change?",
+        "options": [
+          "She believed freedom meant never making plans.",
+          "She saw that freedom could include responsibility.",
+          "She decided she needed someone to order her around.",
+          "She thought owning a key was more important than living well."
+        ],
+        "answerIndex": 1,
+        "explanation": "岚开始认识到，自由不仅是少受规则限制，还包括主动照顾生活条件、为自己的选择负责。洗杯子是这一认识的具体表现。"
+      },
+      "writingPrompt": "Use 'responsibility' to write about one thing you take care of in daily life.",
+      "phrase": {
+        "phrase": "take responsibility for",
+        "translation": "为……承担责任；for 后接名词或动名词"
+      }
+    },
+    {
+      "id": "reading-10",
+      "title": "没有急着给出的建议",
+      "titleEn": "The Empty Seat",
+      "theme": "朋友",
+      "paragraphs": [
+        {
+          "en": "After a difficult class, Rui went to the dining hall and sat beside the window. His friend An joined him. Rui explained that he had answered a question badly and felt embarrassed. An almost began to offer advice, but she stopped. Instead, she asked, 'Would you like me to listen for a while?'",
+          "zh": "一堂不太顺利的课后，睿来到食堂，在窗边坐下。朋友安也坐了过来。睿说，自己有个问题回答得不好，觉得很尴尬。安差点就开始提建议，却又停了下来。她改口问：“你想让我先听你说一会儿吗？”"
+        },
+        {
+          "en": "Rui nodded. He talked while the sunlight moved slowly across the table. His problem did not disappear, and An did not pretend to solve it. Before they left, Rui said he would review the lesson and try again. He looked less alone. A friend cannot always provide the right answer. Sometimes friendship is an empty seat, a little time, and the patience to let another person finish a thought.",
+          "zh": "睿点点头。他慢慢说着，阳光也缓缓移过桌面。他的问题没有消失，安也没有假装自己能解决它。临走前，睿说他会复习那节课，然后再试试。他看起来没有那么孤单了。朋友并不总能给出正确答案。有时候，友谊就是一个空座位、一点时间，以及让另一个人把想法说完的耐心。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "advice",
+          "meaning": "建议"
+        },
+        {
+          "word": "instead",
+          "meaning": "代替；反而"
+        },
+        {
+          "word": "pretend",
+          "meaning": "假装"
+        },
+        {
+          "word": "provide",
+          "meaning": "提供"
+        },
+        {
+          "word": "patience",
+          "meaning": "耐心"
+        }
+      ],
+      "question": {
+        "question": "What did An mainly offer Rui?",
+        "options": [
+          "The exact answer to the class question.",
+          "A promise that he would never feel embarrassed again.",
+          "Time and attention to talk about his feelings.",
+          "A reason to stop attending the class."
+        ],
+        "answerIndex": 2,
+        "explanation": "安询问睿是否想先被倾听，并耐心听他说完。她没有替他解决课堂问题，却帮助他感到不那么孤单。"
+      },
+      "writingPrompt": "Use 'patience' to write about how you would listen to a friend.",
+      "phrase": {
+        "phrase": "let another person finish a thought",
+        "translation": "让另一个人把想法说完；let + 人 + 动词原形"
+      }
+    },
+    {
+      "id": "reading-11",
+      "title": "旧外套里的车票",
+      "titleEn": "A Ticket in an Old Coat",
+      "theme": "成长",
+      "paragraphs": [
+        {
+          "en": "While cleaning her room, Qiao found a train ticket in an old coat. It was from her first trip alone. She remembered standing at the station, afraid of getting on the wrong train. She had checked the ticket many times and asked a worker which platform she needed. The worker had pointed patiently.",
+          "zh": "乔整理房间时，在一件旧外套里发现了一张火车票。那是她第一次独自旅行的车票。她记得，自己站在车站里，担心坐错车。她反复核对车票，还向工作人员询问应该去哪个站台。工作人员耐心地给她指了路。"
+        },
+        {
+          "en": "Now she could make that journey without much worry. She had not noticed the change while it was happening. There had been no special morning when she suddenly became brave. She had simply taken several trips, made a few mistakes, and learned where to ask for help. Qiao put the ticket on her desk. It was a quiet record of growth: a familiar journey that had once felt very far away.",
+          "zh": "如今，再走那段路，她已经不会太担心。变化发生时，她自己并没有察觉。并没有哪个特别的早晨，让她突然变得勇敢。她只是出行了几次，犯过几个小错误，也学会了去哪里求助。乔把车票放在桌上。它安静地记录着成长：一段如今熟悉的旅程，曾经显得那么遥远。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "platform",
+          "meaning": "站台"
+        },
+        {
+          "word": "worry",
+          "meaning": "担心"
+        },
+        {
+          "word": "brave",
+          "meaning": "勇敢的"
+        },
+        {
+          "word": "record",
+          "meaning": "记录"
+        },
+        {
+          "word": "growth",
+          "meaning": "成长"
+        }
+      ],
+      "question": {
+        "question": "What helped Qiao become more comfortable with travelling?",
+        "options": [
+          "Several experiences and learning how to ask for help.",
+          "One special morning when all her fears disappeared.",
+          "Keeping every ticket she had ever bought.",
+          "Never making a mistake at a station."
+        ],
+        "answerIndex": 0,
+        "explanation": "乔经历了几次旅行，犯过小错误，也学会了求助，才逐渐熟悉独自出行。成长来自积累，并非一夜之间发生。"
+      },
+      "writingPrompt": "Use 'growth' to describe a small change you have noticed in yourself.",
+      "phrase": {
+        "phrase": "learned where to ask for help",
+        "translation": "学会了去哪里求助；疑问词 + to do 可表示所要做的事"
+      }
+    },
+    {
+      "id": "reading-12",
+      "title": "厨房里的一盏灯",
+      "titleEn": "The Kitchen Light",
+      "theme": "平凡日常",
+      "paragraphs": [
+        {
+          "en": "Hao came home late from the library. He had spent the day thinking about examinations, future jobs, and all the things he had not done. A small light was on in the kitchen. His father had left a bowl of soup on the table and a note that said, 'Warm it before you eat.'",
+          "zh": "浩从图书馆回到家时，已经很晚。白天里，他一直想着考试、未来的工作，以及所有还没做完的事。厨房里亮着一盏小灯。父亲在桌上留了一碗汤，还有一张字条：“热一热再吃。”"
+        },
+        {
+          "en": "As the soup became warm, Hao watched the steam rise. The future was still uncertain, and tomorrow would still require effort. Yet the room offered something present and simple: food, light, and a place to sit. He ate slowly. We often look for meaning in events large enough to tell a story about. That evening, Hao found a little of it in an ordinary bowl, waiting quietly at the end of the day.",
+          "zh": "汤渐渐热起来，浩看着蒸汽上升。未来仍然不确定，明天依然需要努力。但这个房间给了他一些当下而简单的东西：食物、灯光，以及一个能坐下来的地方。他慢慢吃着。我们常常在足以讲成故事的大事里寻找意义。那个晚上，浩却在一只普通的碗里找到了一点意义；它在一天结束时安静地等着他。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "future",
+          "meaning": "未来"
+        },
+        {
+          "word": "steam",
+          "meaning": "蒸汽"
+        },
+        {
+          "word": "uncertain",
+          "meaning": "不确定的"
+        },
+        {
+          "word": "effort",
+          "meaning": "努力"
+        },
+        {
+          "word": "meaning",
+          "meaning": "意义"
+        }
+      ],
+      "question": {
+        "question": "Why was the bowl of soup meaningful to Hao?",
+        "options": [
+          "It answered all his questions about the future.",
+          "It meant he no longer needed to study.",
+          "It was more expensive than his usual dinner.",
+          "It helped him notice care and comfort in an ordinary moment."
+        ],
+        "answerIndex": 3,
+        "explanation": "未来的问题仍未解决，但汤、灯光和可以坐下来的地方让浩感受到当下的照顾与安定。意义来自普通生活中的具体事物。"
+      },
+      "writingPrompt": "Use 'effort' to write about something you worked on today, even briefly.",
+      "phrase": {
+        "phrase": "at the end of the day",
+        "translation": "在一天结束时；本文使用其字面含义"
+      }
+    },
+    {
+      "id": "reading-13",
+      "title": "地图上的距离",
+      "titleEn": "The Map and the Walk",
+      "theme": "耐心",
+      "paragraphs": [
+        {
+          "en": "Before climbing a hill, Fei studied the map. The path looked short, and she expected to reach the top quickly. But the ground was wet, and some steps were steep. After twenty minutes, she felt annoyed. The tiny line on the map had not shown how heavy her bag would feel.",
+          "zh": "爬山前，菲仔细看了地图。路看起来很短，她以为很快就能到山顶。但地面湿滑，有些台阶很陡。二十分钟后，她有些烦躁。地图上那条小小的线，并没有告诉她背包走起来会有多重。"
+        },
+        {
+          "en": "She stopped beside a stone and drank some water. Then she chose the next bend as her goal instead of looking for the distant top. She reached it, rested, and chose another. The map was useful, but it was not the walk itself. A plan can show us a direction. Our pace must also answer to the ground beneath our feet and the energy we have on that particular day.",
+          "zh": "她在一块石头旁停下，喝了点水。接着，她把下一个转弯处作为目标，不再一直盯着遥远的山顶。到了那里，她休息一下，再选下一个目标。地图很有用，却并不等于真正的行走。计划可以指引方向，但步伐也需要回应脚下的地面，以及我们在那一天实际拥有的精力。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "expect",
+          "meaning": "预计；期待"
+        },
+        {
+          "word": "goal",
+          "meaning": "目标"
+        },
+        {
+          "word": "direction",
+          "meaning": "方向"
+        },
+        {
+          "word": "pace",
+          "meaning": "步速；节奏"
+        },
+        {
+          "word": "energy",
+          "meaning": "精力"
+        }
+      ],
+      "question": {
+        "question": "What lesson does Fei's walk suggest?",
+        "options": [
+          "A useful plan should never be changed.",
+          "We can adjust our pace while keeping a direction.",
+          "Maps are always too difficult to understand.",
+          "The fastest person enjoys the walk the most."
+        ],
+        "answerIndex": 1,
+        "explanation": "菲没有放弃方向，而是把目标改为下一个转弯，并按实际体力休息。文章强调计划与现实情况需要配合。"
+      },
+      "writingPrompt": "Use 'goal' to write about a small learning target for today.",
+      "phrase": {
+        "phrase": "instead of looking for",
+        "translation": "而不是寻找；instead of 后接名词或动名词"
+      }
+    },
+    {
+      "id": "reading-14",
+      "title": "纸杯里的种子",
+      "titleEn": "A Seed in a Paper Cup",
+      "theme": "等待与希望",
+      "paragraphs": [
+        {
+          "en": "In a school activity, Su put a bean seed into a paper cup filled with soil. Every morning, she checked it. For several days, the surface looked exactly the same. She wanted to dig the seed up to see whether anything was happening. Her teacher suggested waiting and keeping the soil slightly wet.",
+          "zh": "一次学校活动中，苏把一颗豆子种进装满土的纸杯里。她每天早晨都去看。连续几天，土壤表面看起来完全没有变化。她想把种子挖出来，看看是否发生了什么。老师建议她再等等，让土壤保持微微湿润。"
+        },
+        {
+          "en": "One morning, a pale green shoot appeared. Su felt pleased, but she also knew that not every seed in the class had grown. Waiting alone was not a promise of success. Still, the cup reminded her that some changes are hard to see at first. She could provide reasonable care, observe the result, and adjust when needed. Hope did not have to be certain. It could be a reason to return tomorrow and look again.",
+          "zh": "一天早晨，一棵浅绿色的嫩芽出现了。苏很高兴，但她也知道，班里并不是每颗种子都发了芽。单纯等待并不保证成功。不过，这只杯子提醒她，有些变化起初很难看见。她可以给予适当照顾，观察结果，并在需要时调整。希望不一定要建立在确定之上；它也可以成为明天再回来看看的一种理由。"
+        }
+      ],
+      "keywords": [
+        {
+          "word": "seed",
+          "meaning": "种子"
+        },
+        {
+          "word": "surface",
+          "meaning": "表面"
+        },
+        {
+          "word": "observe",
+          "meaning": "观察"
+        },
+        {
+          "word": "adjust",
+          "meaning": "调整"
+        },
+        {
+          "word": "hope",
+          "meaning": "希望"
+        }
+      ],
+      "question": {
+        "question": "Which idea is supported by the story?",
+        "options": [
+          "Waiting guarantees that every effort will succeed.",
+          "Digging up a seed every day helps it grow.",
+          "We can care, observe, and adjust even without a certain result.",
+          "A change is real only when we can see it immediately."
+        ],
+        "answerIndex": 2,
+        "explanation": "文章明确说等待不保证成功，同时强调给予合理照顾、观察结果和及时调整。希望可以存在于结果尚不确定的时候。"
+      },
+      "writingPrompt": "Use 'hope' to write about something you want to keep trying.",
+      "phrase": {
+        "phrase": "adjust when needed",
+        "translation": "在需要时调整；when needed 是 when it is needed 的省略形式"
+      }
+    }
+  ],
+  "encouragements": [
+    {
+      "en": "One clear sentence is a good place to begin.",
+      "zh": "先写清楚一句话，就是一个好的开始。"
+    },
+    {
+      "en": "Five minutes can hold one useful discovery.",
+      "zh": "五分钟，也容得下一点有用的新发现。"
+    },
+    {
+      "en": "You can start with a word you already know.",
+      "zh": "可以先从一个认识的词开始。"
+    },
+    {
+      "en": "A forgotten word is a place to return to.",
+      "zh": "忘记的词，只是一个可以再回去看看的地方。"
+    },
+    {
+      "en": "Your next sentence can be simpler.",
+      "zh": "下一句话，写得简单一点也很好。"
+    },
+    {
+      "en": "Notice what is clearer than it was yesterday.",
+      "zh": "看看有没有什么，比昨天更清楚了一点。"
+    },
+    {
+      "en": "A question shows you where to look next.",
+      "zh": "一个疑问，会告诉你接下来可以看哪里。"
+    },
+    {
+      "en": "You do not need to hurry through every word.",
+      "zh": "不用急着从每个单词身边跑过去。"
+    },
+    {
+      "en": "Let one familiar word lead you to a new one.",
+      "zh": "让一个熟悉的词，带你认识一个新词。"
+    },
+    {
+      "en": "A small correction can make your meaning clearer.",
+      "zh": "一处小修改，就能让意思更清楚。"
+    },
+    {
+      "en": "Today can begin from where you are.",
+      "zh": "今天，就从你现在的位置开始。"
+    },
+    {
+      "en": "You may pause and come back to this page.",
+      "zh": "可以停一停，之后再回到这一页。"
+    },
+    {
+      "en": "Your own life gives you things to write about.",
+      "zh": "你的日常生活，就有值得写下来的内容。"
+    },
+    {
+      "en": "Try describing one thing in front of you.",
+      "zh": "试着描述眼前的一样东西。"
+    },
+    {
+      "en": "Understanding one meaning is useful work.",
+      "zh": "弄懂一个意思，就是一次有用的练习。"
+    },
+    {
+      "en": "Read it slowly enough to hear the sentence.",
+      "zh": "慢一点读，让自己听见这句话。"
+    },
+    {
+      "en": "You can ask for a hint and still keep learning.",
+      "zh": "看一眼提示，也是在继续学习。"
+    },
+    {
+      "en": "A mistake can become a useful note.",
+      "zh": "一个错误，可以变成一条有用的笔记。"
+    },
+    {
+      "en": "Choose a pace you can manage today.",
+      "zh": "选一个今天的你能承受的节奏。"
+    },
+    {
+      "en": "The next step does not have to be large.",
+      "zh": "下一步，不必迈得很大。"
+    },
+    {
+      "en": "It is worth noticing a small improvement.",
+      "zh": "一点小小的进步，也值得被自己看见。"
+    },
+    {
+      "en": "Let curiosity give you one more question.",
+      "zh": "让好奇心再带来一个小问题。"
+    },
+    {
+      "en": "You can return without making up for everything at once.",
+      "zh": "回来就好，不用一次补完所有内容。"
+    },
+    {
+      "en": "A useful review can be today's whole task.",
+      "zh": "一次有效的复习，就可以是今天的全部任务。"
+    },
+    {
+      "en": "Say something true about your day.",
+      "zh": "用英语，说一件今天真实发生的小事。"
+    },
+    {
+      "en": "Learning can include both effort and rest.",
+      "zh": "学习里，可以同时有努力和休息。"
+    },
+    {
+      "en": "You can change your plan when your day changes.",
+      "zh": "今天的情况变了，计划也可以跟着调整。"
+    },
+    {
+      "en": "Keep the sentence simple and the meaning your own.",
+      "zh": "句子可以简单，意思可以是你自己的。"
+    },
+    {
+      "en": "One word may open a small window in a story.",
+      "zh": "一个单词，也许会打开故事里的一扇小窗。"
+    },
+    {
+      "en": "For now, one careful attempt is enough.",
+      "zh": "此刻，认真试一次就够了。"
+    }
+  ]
+}

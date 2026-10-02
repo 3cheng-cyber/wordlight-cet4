@@ -1,0 +1,53 @@
+{
+  "sources": [
+    {
+      "id": "oewn-2025",
+      "name": "Open English Wordnet 2025",
+      "url": "https://en-word.net/downloads",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "license": "CC BY 4.0 + Princeton WordNet underlying-data license",
+      "copyright": "Open English Wordnet Team; based on Princeton University WordNet",
+      "licenseFiles": [
+        "WORDNET-LICENSE.txt"
+      ],
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe"
+    },
+    {
+      "id": "ecdict",
+      "name": "ECDICT",
+      "url": "https://github.com/skywind3000/ECDICT",
+      "commit": "bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b",
+      "license": "MIT",
+      "licenseFiles": [
+        "ECDICT-LICENSE.txt"
+      ],
+      "sha256": "1a6947e04785db63613a92e14903cdae7954f7e84860b10e68e5c7cbb3f9c3cf"
+    },
+    {
+      "id": "editorial+ecdict",
+      "name": "词间常用词族补充",
+      "description": "有限的人工编排学习词族；成员存在性核对 ECDICT / OEWN；中文短释义原创整理；没有声称词源方向或全覆盖。",
+      "license": "CC BY 4.0",
+      "copyright": "Wordlight contributors"
+    }
+  ],
+  "coverage": {
+    "queryWords": 5358,
+    "wordsWithDerivatives": 3728,
+    "wordsWithoutDerivatives": 1630,
+    "wordsWithInflections": 4271,
+    "relatedEntries": 7762,
+    "uniqueRelatedWords": 7269,
+    "relationCounts": {
+      "derivation": 6045,
+      "family": 243,
+      "pertainym": 1474
+    },
+    "missingChineseEntries": 0,
+    "curatedGroups": 27,
+    "allDerivationsExhaustive": false
+  },
+  "method": "OEWN 2025 逐义项 derivation / pertainym 直接关联（双向索引），不作图传递闭包；27 组有限常用词族人工补充。ECDICT 中文释义与词形；中文短释义不是义项对齐的完整译文。",
+  "missingText": "该参考库暂未收录",
+  "notice": "优先展示常用同族词；其余为参考库记录的直接关联，可能包含拓展词。词族未穷尽，中文短释义不代表全部义项。时态、分词、比较级和复数另列。"
+}

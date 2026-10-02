@@ -1,0 +1,26 @@
+{
+    "files":  {
+                  "correct":  "/voice/correct.mp3",
+                  "wrong":  "/voice/wrong.mp3",
+                  "unanswered":  "/voice/unanswered.mp3",
+                  "saved":  "/voice/saved.mp3",
+                  "complete":  "/voice/complete.mp3",
+                  "ready":  "/voice/ready.mp3",
+                  "reading-01":  "/voice/reading-01.mp3",
+                  "reading-02":  "/voice/reading-02.mp3",
+                  "reading-03":  "/voice/reading-03.mp3",
+                  "reading-04":  "/voice/reading-04.mp3",
+                  "reading-05":  "/voice/reading-05.mp3",
+                  "reading-06":  "/voice/reading-06.mp3",
+                  "reading-07":  "/voice/reading-07.mp3",
+                  "reading-08":  "/voice/reading-08.mp3",
+                  "reading-09":  "/voice/reading-09.mp3",
+                  "reading-10":  "/voice/reading-10.mp3",
+                  "reading-11":  "/voice/reading-11.mp3",
+                  "reading-12":  "/voice/reading-12.mp3",
+                  "reading-13":  "/voice/reading-13.mp3",
+                  "reading-14":  "/voice/reading-14.mp3"
+              },
+    "totalBytes":  4229476,
+    "voice":  "Microsoft Zira Desktop"
+}

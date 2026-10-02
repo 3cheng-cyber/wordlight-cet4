@@ -1,17 +1,19 @@
+import type {ReadingProgress} from './enrichment';
 export type Sense={id:string;meaning:string;pos:string;example:string;translation:string;prompt:string;hint:string};
 export type Word={word:string;phonetic:string;level:string;topic:string;question:string;reflection:string;senses:Sense[];curated?:boolean};
 export type Skill='read'|'listen'|'write';
 export type Progress={level:number;due:number;last:number;correct:number;wrong:number};
 export type Attempt={id:string;word:string;senseId:string;meaning:string;sentence:string;date:string;createdAt:number;status:'pending'|'correct'|'error';correction?:string;explanation?:string;wordCorrect?:boolean;grammarCorrect?:boolean;retryOf?:string;resolvedAt?:number};
+export type Draft={id:string;word:string;senseId:string;meaning:string;sentence:string;date:string;createdAt:number;retryOf?:string};
 export type Task={word:string;senseId:string;kind:'new'|'review'|'comfort'|'error';retryOf?:string};
-export type Session={id:string;queue:Task[];index:number;phase:'recall'|'reveal'|'listen'|'write'|'saved';seconds:number;minutes:number;draft:string;misses:number;recent:boolean[];buffered:boolean;heard:boolean;listeningAnswer?:string;listeningOptions?:string[];hint:boolean;checkRecall:boolean;revealKnown?:boolean};
-export type Daily={seconds:number;read:number;listen:number;sentences:number;completed:number;words:string[]};
-export type State={version:1;settings:{minutes:number;exam:string;reminder:string;newLimit:number;remindEnabled:boolean};progress:Record<string,Progress>;attempts:Attempt[];daily:Record<string,Daily>;lastStudyDate:string;recovery:{words:string[];started:string;until:string}|null;session:Session|null};
+export type Session={id:string;queue:Task[];index:number;phase:'recall'|'reveal'|'listen'|'write'|'saved';seconds:number;minutes:number;draft:string;misses:number;recent:boolean[];buffered:boolean;heard:boolean;listeningAnswer?:string;listeningOptions?:string[];hint:boolean;checkRecall:boolean;revealKnown?:boolean;draftId?:string};
+export type Daily={seconds:number;read:number;listen:number;sentences:number;completed:number;words:string[];readings?:number};
+export type State={version:1;settings:{minutes:number;exam:string;reminder:string;newLimit:number;remindEnabled:boolean;voiceFeedback?:boolean;motion?:boolean};readingProgress?:Record<string,ReadingProgress>;readingSelection?:string;drafts?:Draft[];progress:Record<string,Progress>;attempts:Attempt[];daily:Record<string,Daily>;lastStudyDate:string;recovery:{words:string[];started:string;until:string}|null;session:Session|null};
 const DAY=86400000;
 export function dateKey(time=Date.now()){const d=new Date(time);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
 export function dayNumber(key:string){return Math.floor(Date.parse(key+'T12:00:00Z')/DAY)}
 export function daysBetween(a:string,b:string){return dayNumber(b)-dayNumber(a)}
-export function initialState():State{return {version:1,settings:{minutes:5,exam:'2026-12-12',reminder:'20:30',newLimit:10,remindEnabled:false},progress:{},attempts:[],daily:{},lastStudyDate:'',recovery:null,session:null}}
+export function initialState():State{return {version:1,settings:{minutes:5,exam:'2026-12-12',reminder:'20:30',newLimit:10,remindEnabled:false,voiceFeedback:true,motion:true},readingProgress:{},progress:{},attempts:[],daily:{},lastStudyDate:'',recovery:null,session:null}}
 export function progressKey(word:string,senseId:string,skill:Skill){return `${word}|${senseId}|${skill}`}
 export function daily(state:State,now=Date.now()):Daily{const key=dateKey(now);return state.daily[key]??(state.daily[key]={seconds:0,read:0,listen:0,sentences:0,completed:0,words:[]})}
 export function touch(state:State,word:string,now=Date.now()){state.lastStudyDate=dateKey(now);const d=daily(state,now);if(!d.words.includes(word))d.words.push(word)}
@@ -74,9 +76,14 @@ export function validBackup(value:unknown):value is State{
  if(s.version!==1||!object(s.settings)||![5,15,30,60].includes(s.settings.minutes)||!date(s.settings.exam)||!num(s.settings.newLimit)||s.settings.newLimit>60||typeof s.settings.remindEnabled!=='boolean'||!/^([01]\d|2[0-3]):[0-5]\d$/.test(s.settings.reminder))return false;
  if(!object(s.progress)||!Object.values(s.progress).every(p=>p&&num(p.level)&&p.level<=6&&num(p.due)&&num(p.last)&&num(p.correct)&&num(p.wrong)))return false;
  if(!Array.isArray(s.attempts)||!s.attempts.every(a=>a&&typeof a.id==='string'&&typeof a.word==='string'&&typeof a.senseId==='string'&&typeof a.meaning==='string'&&date(a.date)&&typeof a.sentence==='string'&&num(a.createdAt)&&['pending','correct','error'].includes(a.status)))return false;
- if(!object(s.daily)||!Object.entries(s.daily).every(([k,d])=>date(k)&&d&&num(d.seconds)&&num(d.read)&&num(d.listen)&&num(d.sentences)&&num(d.completed)&&strings(d.words)))return false;
+ if(!object(s.daily)||!Object.entries(s.daily).every(([k,d])=>date(k)&&d&&num(d.seconds)&&num(d.read)&&num(d.listen)&&num(d.sentences)&&num(d.completed)&&strings(d.words)&&(d.readings===undefined||num(d.readings))))return false;
  if(s.lastStudyDate!==''&&!date(s.lastStudyDate))return false;
  if(s.recovery!==null&&(!object(s.recovery)||!strings(s.recovery.words)||!date(s.recovery.started)||!date(s.recovery.until)))return false;
+ if(s.readingSelection!==undefined&&typeof s.readingSelection!=='string')return false;
+ if(s.settings.voiceFeedback!==undefined&&typeof s.settings.voiceFeedback!=='boolean')return false;
+ if(s.settings.motion!==undefined&&typeof s.settings.motion!=='boolean')return false;
+ if(s.readingProgress!==undefined&&(!object(s.readingProgress)||!Object.values(s.readingProgress).every(p=>p&&num(p.attempts)&&typeof p.correct==='boolean'&&typeof p.draft==='string'&&(p.answer===undefined||Number.isInteger(p.answer)&&p.answer>=0&&p.answer<4))))return false;
+ if(s.drafts!==undefined&&(!Array.isArray(s.drafts)||!s.drafts.every(d=>d&&typeof d.id==='string'&&typeof d.word==='string'&&typeof d.senseId==='string'&&typeof d.meaning==='string'&&typeof d.sentence==='string'&&date(d.date)&&num(d.createdAt))))return false;
  const q=s.session;
  if(q!==null&&(!object(q)||!Array.isArray(q.queue)||!q.queue.length||!num(q.index)||!Number.isInteger(q.index)||q.index>=q.queue.length||!num(q.seconds)||![5,15,30,60].includes(q.minutes)||typeof q.draft!=='string'||!['recall','reveal','listen','write','saved'].includes(q.phase)||!Array.isArray(q.recent)||!q.recent.every(v=>typeof v==='boolean')||!q.queue.every(t=>t&&typeof t.word==='string'&&typeof t.senseId==='string'&&['new','review','comfort','error'].includes(t.kind))))return false;
  return true;
