@@ -8,11 +8,11 @@ async function worker({cached=false,status=200,storageFull=false}={}){
  let networkCalls=0,cacheWrites=0;
  const key=(input:any)=>new URL(typeof input==='string'?input:input.url,'https://wordlight.test').pathname;
  const full=()=>new Response('0123456789',{headers:{'Content-Type':'audio/mpeg','Content-Length':'10',ETag:'"recording-1"'}});
- if(cached){stores.set('wordlight-audio-v1',new Map([['/audio/time.mp3',full()]]));stores.set('wordlight-shell-v1',new Map([['/voice/correct.mp3',full()]]))}
+ if(cached){stores.set('wordlight-audio-v1',new Map([['/audio/time.mp3',full()]]));stores.set('wordlight-shell-test',new Map([['/voice/correct.mp3',full()]]))}
  const caches={async open(name:string){if(!stores.has(name))stores.set(name,new Map());const data=stores.get(name)!;return{async match(input:any){return data.get(key(input))?.clone()},async put(input:any,response:Response){cacheWrites++;if(response.status===206)throw TypeError('Cannot cache a partial response');if(storageFull)throw Error('QuotaExceededError');data.set(key(input),response.clone())}}}};
  const fetch=async()=>{networkCalls++;if(cached)throw Error('offline');return status===206?new Response('2345',{status:206,headers:{'Content-Type':'audio/mpeg','Content-Range':'bytes 2-5/10'}}):full()};
  const self={location:{origin:'https://wordlight.test'},addEventListener(type:string,handler:(event:any)=>void){listeners[type]=handler}};
- vm.runInNewContext(await readFile(new URL('../public/sw.js',import.meta.url),'utf8'),{self,caches,fetch,Response,Headers,URL,Promise,Error});
+ vm.runInNewContext((await readFile(new URL('../public/sw.js',import.meta.url),'utf8')).replace('__WORDLIGHT_BUILD__','test'),{self,caches,fetch,Response,Headers,URL,Promise,Error});
  return{request(path:string,range?:string,ifRange?:string){let response!:Promise<Response>;const headers=new Headers();if(range)headers.set('Range',range);if(ifRange)headers.set('If-Range',ifRange);listeners.fetch({request:{url:'https://wordlight.test'+path,method:'GET',mode:'cors',headers},respondWith(p:Promise<Response>){response=p}});return response},get networkCalls(){return networkCalls},get cacheWrites(){return cacheWrites}};
 }
 

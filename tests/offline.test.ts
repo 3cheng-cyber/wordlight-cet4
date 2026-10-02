@@ -7,10 +7,10 @@ test('offline shell, scripts, dictionary, and downloaded audio remain available;
  const listeners:Record<string,(e:any)=>void>={};
  const stores=new Map<string,Map<string,Response>>();let online=true;let networkCalls=0;
  const key=(v:any)=>new URL(typeof v==='string'?v:v.url,'https://wordlight.test').pathname;
- const caches={async open(name:string){if(!stores.has(name))stores.set(name,new Map());const data=stores.get(name)!;return {async put(url:any,r:Response){if(r.status===206)throw new TypeError('Partial responses cannot be cached');data.set(key(url),r.clone())},async match(url:any){return data.get(key(url))?.clone()}}}};
+ const caches={async keys(){return [...stores.keys()]},async delete(name:string){return stores.delete(name)},async open(name:string){if(!stores.has(name))stores.set(name,new Map());const data=stores.get(name)!;return {async put(url:any,r:Response){if(r.status===206)throw new TypeError('Partial responses cannot be cached');data.set(key(url),r.clone())},async match(url:any){return data.get(key(url))?.clone()}}}};
  const fetch=async(url:any)=>{networkCalls++;if(!online)throw Error('offline');return key(url)==='/offline-assets.json'?Response.json({version:'test',assets:['/assets/app.js']}):new Response('cached '+key(url),{headers:{'content-type':key(url).endsWith('.mp3')?'audio/mpeg':key(url)==='/'?'text/html':'application/octet-stream'}})};
  const self={location:{origin:'https://wordlight.test'},addEventListener(type:string,fn:(e:any)=>void){listeners[type]=fn},async skipWaiting(){},clients:{async claim(){},async matchAll(){return[]}}};
- vm.runInNewContext(await readFile(new URL('../public/sw.js',import.meta.url),'utf8'),{self,caches,fetch,Response,Headers,URL,Promise,Error});
+ vm.runInNewContext((await readFile(new URL('../public/sw.js',import.meta.url),'utf8')).replace('__WORDLIGHT_BUILD__','test'),{self,caches,fetch,Response,Headers,URL,Promise,Error});
  let install:Promise<any>|undefined;listeners.install({waitUntil(p:Promise<any>){install=p}});await install;
  function request(path:string,mode='cors',method='GET'){let response:Promise<Response>|undefined;listeners.fetch({request:{url:'https://wordlight.test'+path,method,mode,headers:new Headers()},respondWith(p:Promise<Response>){response=p}});return response}
  await request('/audio/time.mp3');online=false;
