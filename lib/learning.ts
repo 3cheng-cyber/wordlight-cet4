@@ -5,8 +5,8 @@ export type Skill='read'|'listen'|'write';
 export type Progress={level:number;due:number;last:number;correct:number;wrong:number};
 export type Attempt={id:string;word:string;senseId:string;meaning:string;sentence:string;date:string;createdAt:number;status:'pending'|'correct'|'error';correction?:string;explanation?:string;wordCorrect?:boolean;grammarCorrect?:boolean;retryOf?:string;resolvedAt?:number};
 export type Draft={id:string;word:string;senseId:string;meaning:string;sentence:string;date:string;createdAt:number;retryOf?:string};
-export type Task={word:string;senseId:string;kind:'new'|'review'|'comfort'|'error';retryOf?:string};
-export type Session={id:string;queue:Task[];index:number;phase:'recall'|'reveal'|'listen'|'write'|'saved';seconds:number;minutes:number;draft:string;misses:number;recent:boolean[];buffered:boolean;heard:boolean;listeningAnswer?:string;listeningOptions?:string[];hint:boolean;checkRecall:boolean;revealKnown?:boolean;draftId?:string;attemptId?:string};
+export type Task={word:string;senseId:string;kind:'new'|'review'|'comfort'|'warmup'|'error';retryOf?:string};
+export type Session={id:string;queue:Task[];index:number;phase:'warmup'|'recall'|'reveal'|'listen'|'write'|'saved';seconds:number;minutes:number;draft:string;misses:number;recent:boolean[];buffered:boolean;heard:boolean;listeningAnswer?:string;listeningOptions?:string[];hint:boolean;checkRecall:boolean;revealKnown?:boolean;draftId?:string;attemptId?:string};
 export type Daily={seconds:number;read:number;listen:number;sentences:number;completed:number;words:string[];readings?:number};
 export type State={version:1;settings:{minutes:number;exam:string;reminder:string;newLimit:number;remindEnabled:boolean;voiceFeedback?:boolean;motion?:boolean};readingProgress?:Record<string,ReadingProgress>;readingSelection?:string;drafts?:Draft[];progress:Record<string,Progress>;attempts:Attempt[];daily:Record<string,Daily>;lastStudyDate:string;recovery:{words:string[];started:string;until:string}|null;session:Session|null};
 const DAY=86400000;
@@ -57,9 +57,29 @@ export function makeSession(state:State,words:Word[],minutes:number,mode:'mixed'
  return {id:`s-${now}`,queue:tasks,index:0,phase:'recall',seconds:0,minutes,draft:'',misses:0,recent:[],buffered:false,heard:false,hint:false,checkRecall:false};
 }
 export function recordAnswer(state:State,success:boolean,words:Word[]){const s=state.session;if(!s)return;s.misses=success?0:s.misses+1;s.recent=[...s.recent.slice(-4),success];
- if(s.misses>=2&&!s.buffered){const current=s.queue[s.index];const easy=words.find(w=>w.word!==current.word&&w.level==='easy'&&w.senses.some(x=>(state.progress[progressKey(w.word,x.id,'read')]?.level??0)>0));
- if(easy){s.queue.splice(s.index+1,0,{word:easy.word,senseId:easy.senses[0].id,kind:'comfort'});s.buffered=true;}}
- if(s.recent.length===5&&s.recent.filter(v=>!v).length>=3){s.queue=s.queue.filter((t,i)=>i<=s.index||t.kind!=='new')}
+ if(s.recent.length===5&&s.recent.filter(v=>!v).length>=3){
+  const current=s.queue[s.index];
+  s.queue=s.queue.filter((t,i)=>i<=s.index||t.kind!=='new').map((t,i)=>i>s.index&&t.kind==='warmup'&&!state.progress[progressKey(t.word,t.senseId,'read')]?{...current,kind:'warmup'}:t);
+ }
+ if(s.misses>=2&&!s.buffered){
+  const current=s.queue[s.index];
+  const known=words.filter(w=>w.word!==current.word&&w.level==='easy').flatMap(w=>w.senses.filter(sense=>(state.progress[progressKey(w.word,sense.id,'read')]?.level??0)>0).map(sense=>({word:w.word,senseId:sense.id,kind:'comfort' as const})))[0];
+  if(known)s.queue.splice(s.index+1,0,known);
+  else{
+   const basics=['friend','small','rest','need','want','time','listen','pay'].map(name=>words.find(w=>w.word===name)).filter((w):w is Word=>!!w&&w.word!==current.word&&!!w.senses.length);
+   const newSlot=s.queue.findIndex((t,i)=>i>s.index&&t.kind==='new');
+   // A new basic word replaces a planned new card. With no room for new
+   // material, use a previously encountered word or repeat the current one.
+   const basic=basics.find(w=>!!state.progress[progressKey(w.word,w.senses[0].id,'read')])||(newSlot>=0&&state.settings.newLimit>0?basics[0]:undefined);
+   const warmup:Task=basic?{word:basic.word,senseId:basic.senses[0].id,kind:'warmup'}:{...current,kind:'warmup'};
+   if(basic&&!state.progress[progressKey(basic.word,basic.senses[0].id,'read')]){
+    const duplicate=s.queue.findIndex((t,i)=>i>s.index&&t.kind==='new'&&t.word===warmup.word&&t.senseId===warmup.senseId);
+    s.queue.splice(duplicate>=0?duplicate:newSlot,1);
+   }
+   s.queue.splice(s.index+1,0,warmup);
+  }
+  s.buffered=true;
+ }
 }
 export function addAttempt(state:State,task:Task,word:Word,sense:Sense,sentence:string,now=Date.now()):Attempt{
  const id=typeof crypto!=='undefined'&&crypto.randomUUID?crypto.randomUUID():`a-${now}-${Math.random().toString(16).slice(2)}`;
@@ -90,6 +110,6 @@ export function validBackup(value:unknown):value is State{
  if(s.readingProgress!==undefined&&(!object(s.readingProgress)||!Object.values(s.readingProgress).every(p=>p&&num(p.attempts)&&typeof p.correct==='boolean'&&typeof p.draft==='string'&&(p.answer===undefined||Number.isInteger(p.answer)&&p.answer>=0&&p.answer<4))))return false;
  if(s.drafts!==undefined&&(!Array.isArray(s.drafts)||!s.drafts.every(d=>d&&typeof d.id==='string'&&typeof d.word==='string'&&typeof d.senseId==='string'&&typeof d.meaning==='string'&&typeof d.sentence==='string'&&date(d.date)&&num(d.createdAt))))return false;
  const q=s.session;
- if(q!==null&&(!object(q)||!Array.isArray(q.queue)||!q.queue.length||!num(q.index)||!Number.isInteger(q.index)||q.index>=q.queue.length||!num(q.seconds)||![5,15,30,60].includes(q.minutes)||typeof q.draft!=='string'||!['recall','reveal','listen','write','saved'].includes(q.phase)||!Array.isArray(q.recent)||!q.recent.every(v=>typeof v==='boolean')||!q.queue.every(t=>t&&typeof t.word==='string'&&typeof t.senseId==='string'&&['new','review','comfort','error'].includes(t.kind))))return false;
+ if(q!==null&&(!object(q)||!Array.isArray(q.queue)||!q.queue.length||!num(q.index)||!Number.isInteger(q.index)||q.index>=q.queue.length||!num(q.seconds)||![5,15,30,60].includes(q.minutes)||typeof q.draft!=='string'||!['warmup','recall','reveal','listen','write','saved'].includes(q.phase)||!Array.isArray(q.recent)||!q.recent.every(v=>typeof v==='boolean')||!q.queue.every(t=>t&&typeof t.word==='string'&&typeof t.senseId==='string'&&['new','review','comfort','warmup','error'].includes(t.kind))))return false;
  return true;
 }

@@ -6,6 +6,30 @@ const words=['time','friend','choose','think'].map((word,i)=>({word,phonetic:'',
 test('recognition, listening, and sentence progress remain independent',()=>{const s=initialState();schedule(s,'time','time-1','read',true,now);assert.equal(s.progress[progressKey('time','time-1','read')].level,1);assert.equal(s.progress[progressKey('time','time-1','listen')],undefined);assert.equal(s.progress[progressKey('time','time-1','read')].due,now+day)});
 test('overdue review fills time and suppresses new material',()=>{const s=initialState();for(const w of words.slice(0,3))schedule(s,w.word,w.senses[0].id,'read',false,now-100000);const session=makeSession(s,words,5,'mixed',now);assert.equal(session.queue.length,2);assert.ok(session.queue.every(t=>t.kind!=='new'))});
 test('two failures insert a previously known easy word, not an untested word',()=>{const s=initialState();schedule(s,'time','time-1','read',true,now);s.session=makeSession(s,words,5,'mixed',now);recordAnswer(s,false,words);recordAnswer(s,false,words);assert.equal(s.session.queue[1].kind,'comfort');assert.equal(s.session.queue[1].word,'time')});
+test('a new learner gets a supported warmup without adding another planned new word or awarding mastery',()=>{
+ const s=initialState();s.session=makeSession(s,words,5,'mixed',now);const before=s.session.queue.length;
+ recordAnswer(s,false,words);recordAnswer(s,false,words);
+ assert.equal(s.session.queue.length,before);assert.equal(s.session.queue[1].kind,'warmup');assert.equal(s.session.queue[1].word,'friend');assert.equal(s.session.buffered,true);assert.deepEqual(s.progress,{});
+ s.session.index=1;s.session.phase='warmup';assert.ok(validBackup(JSON.parse(JSON.stringify(s))));
+ const length=s.session.queue.length;recordAnswer(s,false,words);assert.equal(s.session.queue.length,length);
+});
+test('known-word buffers use the exact sense that was answered correctly',()=>{
+ const s=initialState();const multi={...words[0],senses:[words[0].senses[0],{...words[0].senses[0],id:'time-2',meaning:'次'}]};const deck=[multi,...words.slice(1)];
+ schedule(s,'time','time-2','read',true,now);s.session=makeSession(s,deck,5,'mixed',now);s.session.queue=[{word:'friend',senseId:'friend-1',kind:'new'}];
+ recordAnswer(s,false,deck);recordAnswer(s,false,deck);
+ assert.equal(s.session.queue[1].kind,'comfort');assert.equal(s.session.queue[1].senseId,'time-2');
+});
+test('a review-only session with no known basics repeats its current sense with support',()=>{
+ const s=initialState();s.settings.newLimit=0;schedule(s,'choose','choose-1','read',false,now-120000);s.session=makeSession(s,words,5,'review',now);
+ recordAnswer(s,false,words);recordAnswer(s,false,words);
+ assert.equal(s.session.queue[1].kind,'warmup');assert.equal(s.session.queue[1].word,'choose');assert.equal(s.session.queue[1].senseId,'choose-1');
+});
+test('fatigue cannot let an unlearned warmup bypass the pause on new words',()=>{
+ const s=initialState();s.session=makeSession(s,words,15,'mixed',now);
+ recordAnswer(s,false,words);recordAnswer(s,false,words);assert.equal(s.session.queue[1].word,'friend');
+ recordAnswer(s,true,words);recordAnswer(s,false,words);recordAnswer(s,false,words);
+ assert.ok(s.session.queue.slice(1).every(t=>t.kind!=='new'&&t.word===s.session!.queue[0].word));
+});
 test('three failures in five remove only future new cards',()=>{const s=initialState();s.session=makeSession(s,words,15,'mixed',now);for(const result of[false,true,false,true,false])recordAnswer(s,result,words);assert.ok(s.session.queue.slice(s.session.index+1).every(t=>t.kind!=='new'))});
 test('offline submissions stay pending; delayed grades preserve original date and last study date',()=>{const s=initialState();const task={word:'time',senseId:'time-1',kind:'new' as const};const a=addAttempt(s,task,words[0],words[0].senses[0],'I have time.',now);assert.equal(a.status,'pending');assert.equal(Object.keys(s.progress).length,0);applyGrade(s,a.id,{wordCorrect:true,grammarCorrect:true,correction:'I have time.',explanation:'正确'},now+day*2);assert.equal(a.date,dateKey(now));assert.equal(s.lastStudyDate,dateKey(now));assert.equal(s.daily[dateKey(now+day*2)],undefined);assert.equal(a.status,'correct')});
 test('a retry can resolve its original mistake without deleting it; duplicate grade is idempotent',()=>{const s=initialState();const task={word:'time',senseId:'time-1',kind:'new' as const};const a=addAttempt(s,task,words[0],words[0].senses[0],'I has time.',now);applyGrade(s,a.id,{wordCorrect:true,grammarCorrect:false,correction:'I have time.',explanation:'主谓一致'},now);const b=addAttempt(s,{...task,retryOf:a.id},words[0],words[0].senses[0],'I have time.',now+1000);const g={wordCorrect:true,grammarCorrect:true,correction:'I have time.',explanation:'正确'};applyGrade(s,b.id,g,now+2000);applyGrade(s,b.id,g,now+3000);assert.equal(a.resolvedAt,now+2000);assert.equal(s.attempts.length,2);assert.equal(s.progress[progressKey('time','time-1','write')].correct,1)});

@@ -7,3 +7,5 @@
 @media(prefers-reduced-motion:reduce){.with-motion,.with-motion *,.playing *,.memory-caption,.card-entrance{animation:none!important;transition:none!important}}
 
 @media(max-width:760px){.bottom-nav button{font-size:14px}.feedback-words span{font-size:14px}.family-word>p{font-size:14px}}
+
+.warmup-intro{padding-top:4px}.warmup-tip{padding:14px 16px;border-radius:12px;background:#eef4e9;color:#426052;font-size:14px;line-height:1.7;margin:16px 0}.warmup-intro>small{display:block;margin-top:12px;line-height:1.6}
