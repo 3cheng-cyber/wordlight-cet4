@@ -6,7 +6,7 @@ export type Progress={level:number;due:number;last:number;correct:number;wrong:n
 export type Attempt={id:string;word:string;senseId:string;meaning:string;sentence:string;date:string;createdAt:number;status:'pending'|'correct'|'error';correction?:string;explanation?:string;wordCorrect?:boolean;grammarCorrect?:boolean;retryOf?:string;resolvedAt?:number};
 export type Draft={id:string;word:string;senseId:string;meaning:string;sentence:string;date:string;createdAt:number;retryOf?:string};
 export type Task={word:string;senseId:string;kind:'new'|'review'|'comfort'|'error';retryOf?:string};
-export type Session={id:string;queue:Task[];index:number;phase:'recall'|'reveal'|'listen'|'write'|'saved';seconds:number;minutes:number;draft:string;misses:number;recent:boolean[];buffered:boolean;heard:boolean;listeningAnswer?:string;listeningOptions?:string[];hint:boolean;checkRecall:boolean;revealKnown?:boolean;draftId?:string};
+export type Session={id:string;queue:Task[];index:number;phase:'recall'|'reveal'|'listen'|'write'|'saved';seconds:number;minutes:number;draft:string;misses:number;recent:boolean[];buffered:boolean;heard:boolean;listeningAnswer?:string;listeningOptions?:string[];hint:boolean;checkRecall:boolean;revealKnown?:boolean;draftId?:string;attemptId?:string};
 export type Daily={seconds:number;read:number;listen:number;sentences:number;completed:number;words:string[];readings?:number};
 export type State={version:1;settings:{minutes:number;exam:string;reminder:string;newLimit:number;remindEnabled:boolean;voiceFeedback?:boolean;motion?:boolean};readingProgress?:Record<string,ReadingProgress>;readingSelection?:string;drafts?:Draft[];progress:Record<string,Progress>;attempts:Attempt[];daily:Record<string,Daily>;lastStudyDate:string;recovery:{words:string[];started:string;until:string}|null;session:Session|null};
 const DAY=86400000;
@@ -30,20 +30,23 @@ export function resumeAfterGap(state:State,now=Date.now()){
  const words=[...new Set(Object.entries(state.daily).filter(([k])=>dayNumber(k)>=monday&&dayNumber(k)<=monday+6).flatMap(([,d])=>d.words))];
  state.recovery={words,started:today,until:dateKey(now+7*DAY)};if(!state.session?.draft.trim())state.session=null;return true;
 }
+export function pendingAttempt(state:State,word:string,senseId:string){return state.attempts.findLast(a=>a.word===word&&a.senseId===senseId&&a.status==='pending')}
 export function dueTasks(state:State,words:Word[],now=Date.now()):Task[]{
  const tasks: {task:Task;priority:number}[]=[];
+ const pendingSenses=new Set(state.attempts.filter(a=>a.status==='pending').map(a=>`${a.word}|${a.senseId}`));
  const errors=new Map<string,Attempt>();for(const a of state.attempts)if(a.status==='error'&&!a.resolvedAt&&!errors.has(`${a.word}|${a.senseId}`))errors.set(`${a.word}|${a.senseId}`,a);
  const recovering=new Set(state.recovery?.words||[]);
  for(const w of words)for(const sense of w.senses){
   const items=(['read','listen','write'] as Skill[]).map(s=>state.progress[progressKey(w.word,sense.id,s)]).filter(Boolean);
-  const due=items.filter(p=>p.due<=now);
-  const error=errors.get(`${w.word}|${sense.id}`);
+  const pending=pendingSenses.has(`${w.word}|${sense.id}`);
+  const due=(pending?(['read','listen'] as Skill[]).map(skill=>state.progress[progressKey(w.word,sense.id,skill)]).filter(Boolean):items).filter(p=>p.due<=now);
+  const error=pending?undefined:errors.get(`${w.word}|${sense.id}`);
   const recover=state.recovery&&dateKey(now)<state.recovery.until&&recovering.has(w.word)&&!items.some(p=>dateKey(p.last)>=state.recovery!.started);
   if(due.length||error||recover)tasks.push({task:{word:w.word,senseId:sense.id,kind:error?'error':'review',retryOf:error?.id},priority:error?-1e15:recover?-1e14:Math.min(...due.map(p=>p.due))});
  }
  return tasks.sort((a,b)=>a.priority-b.priority).map(v=>v.task);
 }
-export function newTasks(state:State,words:Word[]):Task[]{return words.flatMap(w=>w.senses.filter((s,i)=>!state.progress[progressKey(w.word,s.id,'read')]&&(i===0||!!state.progress[progressKey(w.word,w.senses[i-1].id,'read')])).map(s=>({word:w.word,senseId:s.id,kind:'new' as const})))}
+export function newTasks(state:State,words:Word[]):Task[]{const pendingSenses=new Set(state.attempts.filter(a=>a.status==='pending').map(a=>`${a.word}|${a.senseId}`));return words.flatMap(w=>w.senses.filter((s,i)=>!state.progress[progressKey(w.word,s.id,'read')]&&!pendingSenses.has(`${w.word}|${s.id}`)&&(i===0||!!state.progress[progressKey(w.word,w.senses[i-1].id,'read')])).map(s=>({word:w.word,senseId:s.id,kind:'new' as const})))}
 export function makeSession(state:State,words:Word[],minutes:number,mode:'mixed'|'review'|'errors'='mixed',now=Date.now()):Session{
  const today=daily(state,now);const remaining=minutes*60;const due=dueTasks(state,words,now);const capacity=Math.max(1,Math.floor(remaining/120));
  let tasks=mode==='errors'?due.filter(t=>t.kind==='error'):due;
@@ -60,7 +63,9 @@ export function recordAnswer(state:State,success:boolean,words:Word[]){const s=s
 }
 export function addAttempt(state:State,task:Task,word:Word,sense:Sense,sentence:string,now=Date.now()):Attempt{
  const id=typeof crypto!=='undefined'&&crypto.randomUUID?crypto.randomUUID():`a-${now}-${Math.random().toString(16).slice(2)}`;
- const a:Attempt={id,word:word.word,senseId:sense.id,meaning:sense.meaning,sentence:sentence.trim(),date:dateKey(now),createdAt:now,status:'pending',retryOf:task.retryOf};state.attempts.push(a);touch(state,word.word,now);daily(state,now).sentences++;return a;
+ const errors=state.attempts.filter(a=>a.word===word.word&&a.senseId===sense.id&&a.status==='error'&&!a.resolvedAt);
+ const retryOf=errors.find(a=>a.id===task.retryOf)?.id||errors[0]?.id;
+ const a:Attempt={id,word:word.word,senseId:sense.id,meaning:sense.meaning,sentence:sentence.trim(),date:dateKey(now),createdAt:now,status:'pending',retryOf};state.attempts.push(a);touch(state,word.word,now);daily(state,now).sentences++;return a;
 }
 export type Grade={wordCorrect:boolean;grammarCorrect:boolean;correction:string;explanation:string};
 export function applyGrade(state:State,id:string,g:Grade,now=Date.now()){const a=state.attempts.find(a=>a.id===id);if(!a||a.status!=='pending')return;a.wordCorrect=g.wordCorrect;a.grammarCorrect=g.grammarCorrect;a.correction=g.correction;a.explanation=g.explanation;a.status=g.wordCorrect&&g.grammarCorrect?'correct':'error';schedule(state,a.word,a.senseId,'write',a.status==='correct',now);

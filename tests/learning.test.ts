@@ -13,5 +13,28 @@ test('only three complete missed calendar days trigger weekly restart and histor
 test('new-word quota counts new words, not existing review words',()=>{const s=initialState();s.settings.newLimit=1;schedule(s,'time','time-1','read',true,now-day*2);schedule(s,'time','time-1','read',true,now);const session=makeSession(s,words,15,'mixed',now);assert.equal(session.queue.filter(t=>t.kind==='new').length,1)});
 test('backup validation rejects corrupted progress and accepts normal state',()=>{const s=initialState();assert.ok(validBackup(s));assert.equal(validBackup({...s,progress:{x:{level:'bad'}}}),false);assert.equal(validBackup({...s,attempts:[{id:'x',status:'pending'}]}),false)});
 test('pending grading never creates a wrong-answer review',()=>{const s=initialState();addAttempt(s,{word:'time',senseId:'time-1',kind:'new'},words[0],words[0].senses[0],'I have time.',now);assert.equal(dueTasks(s,words,now).length,0)});
+test('pending retries stop repeated sentence tasks while preserving due recognition and listening',()=>{
+ const s=initialState(),w=words[0],sense=w.senses[0],task={word:w.word,senseId:sense.id,kind:'new' as const};
+ const original=addAttempt(s,task,w,sense,'I has time.',now);
+ applyGrade(s,original.id,{wordCorrect:true,grammarCorrect:false,correction:'I have time.',explanation:'主谓一致'},now);
+ const retry=addAttempt(s,{...task,retryOf:original.id},w,sense,'I have time.',now+1000);
+ assert.equal(dueTasks(s,words,now+120000).length,0);
+ assert.equal(makeSession(s,words,5,'errors',now+120000).queue.length,0);
+ assert.ok(makeSession(s,words,5,'mixed',now+120000).queue.every(t=>t.word!==w.word));
+ schedule(s,w.word,sense.id,'read',false,now);
+ assert.equal(dueTasks(s,words,now+120000)[0].kind,'review');
+ schedule(s,w.word,sense.id,'read',true,now+120000);
+ applyGrade(s,retry.id,{wordCorrect:false,grammarCorrect:false,correction:'I have time.',explanation:'再试一次'},now+120000);
+ assert.equal(dueTasks(s,words,now+120001)[0].kind,'error');
+});
 test('another five-minute session remains available after earlier learning time',()=>{const s=initialState();daily(s,now).seconds=600;assert.ok(makeSession(s,words,5,'mixed',now).queue.length>0)});
+test('an error arriving during a review is linked when the new sentence is submitted',()=>{
+ const s=initialState(),w=words[0],sense=w.senses[0],task={word:w.word,senseId:sense.id,kind:'review' as const};
+ const first=addAttempt(s,task,w,sense,'I has time.',now);
+ applyGrade(s,first.id,{wordCorrect:true,grammarCorrect:false,correction:'I have time.',explanation:'主谓一致'},now+1000);
+ const retry=addAttempt(s,task,w,sense,'I have time.',now+2000);
+ assert.equal(retry.retryOf,first.id);
+ applyGrade(s,retry.id,{wordCorrect:true,grammarCorrect:true,correction:'I have time.',explanation:'正确'},now+3000);
+ assert.equal(first.resolvedAt,now+3000);assert.equal(dueTasks(s,words,now+3001).length,0);
+});
 test('backup preserves unfinished sentence and rejects malformed recovery',()=>{const s=initialState();s.session=makeSession(s,words,5,'mixed',now);s.session.phase='write';s.session.draft='I choose to';assert.ok(validBackup(JSON.parse(JSON.stringify(s))));assert.equal(validBackup({...s,recovery:{words:42,started:'bad',until:null}}),false)});
