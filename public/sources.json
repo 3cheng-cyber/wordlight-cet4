@@ -1,0 +1,76 @@
+{
+  "name": "ECDICT 基础与四级参考词库",
+  "repository": "https://github.com/skywind3000/ECDICT",
+  "data_url": "https://raw.githubusercontent.com/skywind3000/ECDICT/bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b/ecdict.csv",
+  "commit": "bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b",
+  "license": "MIT",
+  "license_url": "https://github.com/skywind3000/ECDICT/blob/bc015ed2e24a7abef49fc6dbbb7fe32c1dadaf8b/LICENSE",
+  "license_file": "ECDICT-LICENSE.txt",
+  "copyright_notice": "Copyright (c) 2025 Linwei",
+  "fetched_at": "2026-10-03T04:10:29.254413+08:00",
+  "actual_count": 5358,
+  "source_rows_scanned": 770611,
+  "case_insensitive_duplicates_removed": 0,
+  "empty_word_or_definition_rows_excluded": 0,
+  "missing_phonetic_count": 49,
+  "selection": "Select exact source tags cet4, gk, zk (union). Keep Chinese translation lines and phonetic field. Split line-leading part-of-speech abbreviations when available. Deduplicate case-insensitively. Sort by positive source BNC rank, then word.",
+  "selected_tags": [
+    "cet4",
+    "gk",
+    "zk"
+  ],
+  "official_comparison": false,
+  "official_reference_url": "https://cet.neea.edu.cn/html1/folder/16113/1588-1.htm",
+  "limitations": [
+    "这是按 ECDICT 标签提取的开源参考词库，未与教育考试院官方词表逐条核对；不得称为官方完整词库。",
+    "cet4 标签不包含全部基础词，扩大版本纳入 zk（中考）和 gk（高考）标签弥补基础覆盖；仍不保证所有词形和全部常用词均覆盖。",
+    "条数表示去重词条数，不等于官方考试词汇量要求；英美拼写及词形可能单列。",
+    "词性和中文释义继承上游，未逐条人工校对；可能包含专业义项、较旧用语或标注错误。",
+    "音标以原库字段为准，未额外生成音频，也不保证所有词条都有音标。",
+    "BNC 词频只作初始排序参考，不代表四级真题词频或个人学习优先级。",
+    "本资产不含哲理卡片、原创例句、独立义项级学习目标或人工审定的考试常用义项。",
+    "发布衍生资产时应一并保留上游许可证及版权声明。"
+  ],
+  "validation": {
+    "non_empty": true,
+    "unique_case_insensitive_words": true,
+    "all_definitions_non_empty": true,
+    "utf8_replacement_characters": 0,
+    "sample_words_checked": [
+      "choose",
+      "habit",
+      "freedom",
+      "government",
+      "interest",
+      "change",
+      "remember",
+      "good",
+      "time",
+      "book",
+      "work"
+    ],
+    "known_missing_foundation_words": []
+  },
+  "source_selected_tagged_count": 5361,
+  "retained_tag_counts": {
+    "zk": 1603,
+    "gk": 3677,
+    "cet4": 3849
+  },
+  "vocab_sha256": "4d9e964bc75d7c62973fb74cc2c11b9dcbd9118e793d1b0510ff24a4fbd5d6f1",
+  "original_count": 5361,
+  "local_corrections": {
+    "removed": [
+      "cance",
+      "F",
+      "uptodate"
+    ],
+    "renamed": {},
+    "definitions_corrected": [
+      "a",
+      "founding"
+    ],
+    "note": "uptodate 与已有标准词形 up-to-date 重复，删除错误词形。"
+  },
+  "audio_source": "单独生成的 Windows Microsoft Zira Desktop 合成语音，见 audio-manifest.json。"
+}

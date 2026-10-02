@@ -1,0 +1,511 @@
+[
+  {
+    "word": "time", "phonetic": "/taɪm/", "level": "easy", "topic": "时间",
+    "question": "同样是空闲的五分钟，什么样的度过方式会让你觉得值得？",
+    "reflection": "你可以回想一次短暂却满足的时刻，看看它对你意味着什么。",
+    "senses": [
+      {"id": "time-1", "meaning": "时间", "pos": "n.", "example": "I have time for a short walk.", "translation": "我有时间散一小会儿步。", "prompt": "用 time 表示“时间”，写一句你愿意花时间做的事。", "hint": "I have time for ___."},
+      {"id": "time-2", "meaning": "次；回", "pos": "n.", "example": "I read the story three times.", "translation": "这个故事我读了三遍。", "prompt": "用 time 的复数 times 表示“次”，写一句你做过几次的事。", "hint": "I tried it ___ times."}
+    ]
+  },
+  {
+    "word": "friend", "phonetic": "/frend/", "level": "easy", "topic": "友谊",
+    "question": "一个人需要做出什么样的小事，才会让你愿意把他当作朋友？",
+    "reflection": "你在意的也许是陪伴、理解，或某个很具体的举动。",
+    "senses": [
+      {"id": "friend-1", "meaning": "朋友", "pos": "n.", "example": "My friend listens to me.", "translation": "我的朋友愿意听我说话。", "prompt": "用 friend 写一句你欣赏朋友的地方，或你愿意为朋友做的事。", "hint": "My friend ___."}
+    ]
+  },
+  {
+    "word": "think", "phonetic": "/θɪŋk/", "level": "easy", "topic": "思考",
+    "question": "当很多人都赞同一种说法时，你通常会怎样判断自己是否认同？",
+    "reflection": "你可以留意自己的想法来自经历、证据，还是对某个人的信任。",
+    "senses": [
+      {"id": "think-1", "meaning": "认为；思考", "pos": "v.", "example": "I think small steps can help.", "translation": "我认为小小的行动能有帮助。", "prompt": "用 think 表示“认为”，写一句你对学习或生活的真实看法。", "hint": "I think ___ is important."}
+    ]
+  },
+  {
+    "word": "feel", "phonetic": "/fiːl/", "level": "easy", "topic": "情绪",
+    "question": "当你说自己今天不太好时，怎样描述才能更接近真实的感受？",
+    "reflection": "你可以试着给感受一个具体的名字，也可以暂时保留不确定。",
+    "senses": [
+      {"id": "feel-1", "meaning": "感到；感觉", "pos": "v.", "example": "I feel calm after a walk.", "translation": "散步之后，我感到平静。", "prompt": "用 feel 写一句你在某种情境下的感受。", "hint": "I feel ___ when I ___."}
+    ]
+  },
+  {
+    "word": "need", "phonetic": "/niːd/", "level": "easy", "topic": "需求",
+    "question": "你很想得到的一样东西，在哪些时候才算是生活中真正需要的？",
+    "reflection": "可以从没有它时会发生什么，慢慢辨认自己的需要。",
+    "senses": [
+      {"id": "need-1", "meaning": "需要", "pos": "v.", "example": "I need a little more sleep.", "translation": "我需要再多睡一会儿。", "prompt": "用 need 写一句你此刻真正需要的东西或行动。", "hint": "I need ___."}
+    ]
+  },
+  {
+    "word": "want", "phonetic": "/wɒnt/", "level": "easy", "topic": "愿望",
+    "question": "如果暂时没有别人的期待，你今天最想为自己做一件什么事？",
+    "reflection": "你的愿望可以很小，先把它说清楚也许就有意义。",
+    "senses": [
+      {"id": "want-1", "meaning": "想要", "pos": "v.", "example": "I want to learn one new word.", "translation": "我想学一个新单词。", "prompt": "用 want 写一句你今天想做的事。", "hint": "I want to ___."}
+    ]
+  },
+  {
+    "word": "small", "phonetic": "/smɔːl/", "level": "easy", "topic": "行动",
+    "question": "一件小事需要重复多少次，才会让你开始相信自己正在发生变化？",
+    "reflection": "你可以观察一个微小的变化，看看自己会如何判断它。",
+    "senses": [
+      {"id": "small-1", "meaning": "小的；少量的", "pos": "adj.", "example": "A small step is still a step.", "translation": "小小的一步也是一步。", "prompt": "用 small 写一句你今天能完成的小行动。", "hint": "I can take a small step by ___."}
+    ]
+  },
+  {
+    "word": "try", "phonetic": "/traɪ/", "level": "easy", "topic": "行动",
+    "question": "一件事看起来很难时，怎样的一次尝试会让你觉得愿意开始？",
+    "reflection": "你可以把第一次尝试看作了解这件事的机会。",
+    "senses": [
+      {"id": "try-1", "meaning": "尝试；努力", "pos": "v.", "example": "I will try to read one page.", "translation": "我会试着读一页。", "prompt": "用 try 写一句你愿意尝试的小事。", "hint": "I will try to ___."}
+    ]
+  },
+  {
+    "word": "learn", "phonetic": "/lɜːn/", "level": "easy", "topic": "学习",
+    "question": "学会一件事的哪一个瞬间，会让你觉得此前的努力真的有了回报？",
+    "reflection": "你可以回忆一次从不会到会的变化，不必只看最后的成绩。",
+    "senses": [
+      {"id": "learn-1", "meaning": "学习；学会", "pos": "v.", "example": "I learn new words every day.", "translation": "我每天学习新单词。", "prompt": "用 learn 写一句你正在学或想学的内容。", "hint": "I want to learn ___."}
+    ]
+  },
+  {
+    "word": "rest", "phonetic": "/rest/", "level": "easy", "topic": "休息",
+    "question": "怎样的休息能让你真的恢复精力，而不只是让时间悄悄过去？",
+    "reflection": "你可以比较两次休息后的感受，寻找适合自己的方式。",
+    "senses": [
+      {"id": "rest-1", "meaning": "休息", "pos": "n.", "example": "I need a short rest.", "translation": "我需要短暂休息一下。", "prompt": "用 rest 表示“休息”，写一句你需要怎样的休息。", "hint": "I need a ___ rest."},
+      {"id": "rest-2", "meaning": "其余部分；其余的人", "pos": "n.", "example": "I will do the rest tomorrow.", "translation": "剩下的部分我明天做。", "prompt": "用 the rest 表示“其余部分”，写一句你如何安排剩下的时间或任务。", "hint": "I will ___ for the rest of the day."}
+    ]
+  },
+  {
+    "word": "free", "phonetic": "/friː/", "level": "easy", "topic": "自由",
+    "question": "没有人催促也没有安排的时候，你会怎样决定接下来把时间给谁？",
+    "reflection": "你可以留意空闲时的第一个选择，它也许反映了某种需要。",
+    "senses": [
+      {"id": "free-1", "meaning": "空闲的", "pos": "adj.", "example": "I am free after dinner.", "translation": "晚饭后我有空。", "prompt": "用 free 表示“空闲的”，写一句你什么时候有空。", "hint": "I am free ___."},
+      {"id": "free-2", "meaning": "自由的；不受限制的", "pos": "adj.", "example": "I am free to choose my own path.", "translation": "我可以自由选择自己的道路。", "prompt": "用 free 表示“自由的”，写一句你可以自主决定的事。", "hint": "I am free to ___."},
+      {"id": "free-3", "meaning": "免费的", "pos": "adj.", "example": "The museum is free on Sundays.", "translation": "这家博物馆星期日免费开放。", "prompt": "用 free 表示“免费的”，写一句你接触过的免费资源或活动。", "hint": "___ is free."}
+    ]
+  },
+  {
+    "word": "right", "phonetic": "/raɪt/", "level": "easy", "topic": "判断",
+    "question": "一件事让你感觉很对的时候，你还会通过什么来检查这个判断？",
+    "reflection": "直觉和进一步了解都可以成为你判断时参考的线索。",
+    "senses": [
+      {"id": "right-1", "meaning": "正确的；合适的", "pos": "adj.", "example": "This is the right time to ask.", "translation": "现在是提问的合适时机。", "prompt": "用 right 表示“合适的”，写一句适合你做某件事的时机。", "hint": "___ is the right time to ___."},
+      {"id": "right-2", "meaning": "右边的", "pos": "adj.", "example": "My phone is in my right hand.", "translation": "我的手机在右手里。", "prompt": "用 right 表示“右边的”，写一句你身边某件物品的位置或你的动作。", "hint": "I hold ___ in my right hand."},
+      {"id": "right-3", "meaning": "权利", "pos": "n.", "example": "Everyone has the right to speak.", "translation": "每个人都有发言的权利。", "prompt": "用 right 表示“权利”，写一句你看重的权利。", "hint": "Everyone has the right to ___."}
+    ]
+  },
+  {
+    "word": "kind", "phonetic": "/kaɪnd/", "level": "easy", "topic": "善意",
+    "question": "一种善意在什么情况下会让你感到温暖，又在什么时候让你有压力？",
+    "reflection": "你可以从对方的做法和自己的需要两边想一想。",
+    "senses": [
+      {"id": "kind-1", "meaning": "友善的；体贴的", "pos": "adj.", "example": "She is kind to new students.", "translation": "她对新同学很友善。", "prompt": "用 kind 表示“友善的”，写一句你或身边人的友善表现。", "hint": "___ is kind to ___."},
+      {"id": "kind-2", "meaning": "种类", "pos": "n.", "example": "I like this kind of story.", "translation": "我喜欢这种故事。", "prompt": "用 kind 表示“种类”，写一句你喜欢哪类书、视频或活动。", "hint": "I like this kind of ___."}
+    ]
+  },
+  {
+    "word": "share", "phonetic": "/ʃeə/", "level": "easy", "topic": "友谊",
+    "question": "当你想把一件开心的事告诉别人时，你最希望对方给你什么回应？",
+    "reflection": "分享可能是为了被理解，也可能只是想让快乐多停留一会儿。",
+    "senses": [
+      {"id": "share-1", "meaning": "分享；共同使用", "pos": "v.", "example": "I share my ideas with a friend.", "translation": "我和一位朋友分享自己的想法。", "prompt": "用 share 表示“分享”，写一句你想和谁分享什么。", "hint": "I share ___ with ___."},
+      {"id": "share-2", "meaning": "一份；份额", "pos": "n.", "example": "I did my share of the work.", "translation": "我完成了自己那一份工作。", "prompt": "用 share 表示“份额”，写一句你承担任务或费用的情况。", "hint": "I do my share of ___."}
+    ]
+  },
+  {
+    "word": "care", "phonetic": "/keə/", "level": "easy", "topic": "关心",
+    "question": "你怎样分辨一个人真的关心你，和他只是希望你按他的想法生活？",
+    "reflection": "你可以看看这份关心是否容得下你的感受和选择。",
+    "senses": [
+      {"id": "care-1", "meaning": "关心；在意", "pos": "v.", "example": "I care about my friends.", "translation": "我关心我的朋友们。", "prompt": "用 care about 表示“关心或在意”，写一句你在意的人或事。", "hint": "I care about ___."},
+      {"id": "care-2", "meaning": "照顾；照料", "pos": "n.", "example": "I take care of my cat.", "translation": "我照顾我的猫。", "prompt": "用 take care of 表示“照顾”，写一句你照顾自己或他人的做法。", "hint": "I take care of ___ by ___."}
+    ]
+  },
+  {
+    "word": "change", "phonetic": "/tʃeɪndʒ/", "level": "easy", "topic": "变化",
+    "question": "当你改变一个已经坚持很久的想法时，什么会让你愿意承认这种变化？",
+    "reflection": "你可以想想自己曾因什么经历而重新看待一件事。",
+    "senses": [
+      {"id": "change-1", "meaning": "改变；变化", "pos": "v.", "example": "I can change my study plan.", "translation": "我可以改变自己的学习计划。", "prompt": "用 change 表示“改变”，写一句你想调整的做法或想法。", "hint": "I want to change ___."},
+      {"id": "change-2", "meaning": "零钱；找回的钱", "pos": "n.", "example": "I keep some change in my bag.", "translation": "我在包里放了一些零钱。", "prompt": "用 change 表示“零钱”，写一句你如何存放或使用零钱。", "hint": "I keep some change ___."}
+    ]
+  },
+  {
+    "word": "choose", "phonetic": "/tʃuːz/", "level": "easy", "topic": "选择",
+    "question": "如果眼前的轻松和之后的满足不能同时拥有，你会怎样做一次选择？",
+    "reflection": "你可以先看看自己此刻更需要什么，以及愿意承担什么。",
+    "senses": [
+      {"id": "choose-1", "meaning": "选择", "pos": "v.", "example": "I choose to read for five minutes.", "translation": "我选择读五分钟。", "prompt": "用 choose 写一句你今天主动做出的选择。", "hint": "I choose to ___."}
+    ]
+  },
+  {
+    "word": "enough", "phonetic": "/ɪˈnʌf/", "level": "easy", "topic": "满足",
+    "question": "在怎样的情况下，你能安心地对自己说今天做到这里已经足够了？",
+    "reflection": "足够的标准可以参考你的目标，也可以参考你今天的精力。",
+    "senses": [
+      {"id": "enough-1", "meaning": "足够的", "pos": "det.", "example": "I have enough time for one word.", "translation": "我有足够的时间学一个单词。", "prompt": "用 enough 放在名词前，写一句你拥有足够的什么来做一件事。", "hint": "I have enough ___ to ___."},
+      {"id": "enough-2", "meaning": "足够地", "pos": "adv.", "example": "This step is small enough for me.", "translation": "这一步足够小，适合我去做。", "prompt": "用 enough 放在形容词后，写一句对你而言足够简单或足够好的事。", "hint": "___ is ___ enough for me."}
+    ]
+  },
+  {
+    "word": "work", "phonetic": "/wɜːk/", "level": "easy", "topic": "行动",
+    "question": "你会通过哪些具体的变化，判断自己投入精力的方法正在起作用？",
+    "reflection": "你可以先选一个能观察到的小变化，给方法一点检验的时间。",
+    "senses": [
+      {"id": "work-1", "meaning": "工作；用功", "pos": "v.", "example": "I work on my English every day.", "translation": "我每天花时间学习英语。", "prompt": "用 work 表示“用功或工作”，写一句你在努力做的事。", "hint": "I work on ___ every day."},
+      {"id": "work-2", "meaning": "起作用；有效", "pos": "v.", "example": "Short study sessions work for me.", "translation": "短时间的学习对我有效。", "prompt": "用 work 表示“有效”，写一句对你有效的办法。", "hint": "___ works for me."}
+    ]
+  },
+  {
+    "word": "dream", "phonetic": "/driːm/", "level": "easy", "topic": "愿望",
+    "question": "当一个愿望暂时离你很远时，你会怎样决定是否继续为它留出位置？",
+    "reflection": "你可以想想这个愿望吸引你的部分，以及现在能做的一点事。",
+    "senses": [
+      {"id": "dream-1", "meaning": "梦想；理想", "pos": "n.", "example": "My dream is to see the sea.", "translation": "我的梦想是去看海。", "prompt": "用 dream 表示“梦想”，写一句你愿意追求的事情。", "hint": "My dream is to ___."},
+      {"id": "dream-2", "meaning": "梦；睡梦", "pos": "n.", "example": "I had a strange dream last night.", "translation": "我昨晚做了一个奇怪的梦。", "prompt": "用 dream 表示“睡梦”，写一句你做过或记得的梦。", "hint": "I had a dream about ___."}
+    ]
+  },
+  {
+    "word": "slow", "phonetic": "/sləʊ/", "level": "easy", "topic": "节奏",
+    "question": "当你的进度比别人慢时，什么能帮助你判断是否需要调整自己的节奏？",
+    "reflection": "你可以同时看看自己的理解程度、身体感受和实际目标。",
+    "senses": [
+      {"id": "slow-1", "meaning": "缓慢的", "pos": "adj.", "example": "My progress is slow, but I keep learning.", "translation": "我的进步很慢，但我继续学习。", "prompt": "用 slow 写一句你生活中较慢的过程或节奏。", "hint": "My ___ is slow."}
+    ]
+  },
+  {
+    "word": "alone", "phonetic": "/əˈləʊn/", "level": "easy", "topic": "独处",
+    "question": "一个人待着的时候，哪些时刻让你感觉自在，哪些时刻会想要陪伴？",
+    "reflection": "独处时的感受可能随着地点、心情和正在做的事情而变化。",
+    "senses": [
+      {"id": "alone-1", "meaning": "独自；单独", "pos": "adv.", "example": "I like to walk alone sometimes.", "translation": "有时我喜欢独自散步。", "prompt": "用 alone 写一句你喜欢或不喜欢独自做的事。", "hint": "I like to ___ alone."}
+    ]
+  },
+  {
+    "word": "together", "phonetic": "/təˈɡeðə/", "level": "easy", "topic": "陪伴",
+    "question": "和别人一起做同一件事时，哪些变化会让你觉得这份陪伴特别有价值？",
+    "reflection": "你可以想想一起行动时多出来的快乐、支持，或需要协调的部分。",
+    "senses": [
+      {"id": "together-1", "meaning": "一起；共同", "pos": "adv.", "example": "We learn better when we study together.", "translation": "我们一起学习时学得更好。", "prompt": "用 together 写一句你愿意和别人一起做的事。", "hint": "We ___ together."}
+    ]
+  },
+  {
+    "word": "listen", "phonetic": "/ˈlɪsən/", "level": "easy", "topic": "理解",
+    "question": "当别人向你诉说烦恼时，你怎样判断他更需要建议还是有人认真倾听？",
+    "reflection": "你可以留意对方的表达，也可以温和地确认他希望得到什么。",
+    "senses": [
+      {"id": "listen-1", "meaning": "听；倾听", "pos": "v.", "example": "I listen to my friend carefully.", "translation": "我认真听朋友说话。", "prompt": "用 listen to 写一句你愿意倾听的人或喜欢听的内容。", "hint": "I listen to ___."}
+    ]
+  },
+  {
+    "word": "hope", "phonetic": "/həʊp/", "level": "easy", "topic": "期待",
+    "question": "当结果还不确定的时候，你心里的希望会怎样影响今天愿意做的事？",
+    "reflection": "你可以想想希望带来的力量，以及自己能够把握的那一部分。",
+    "senses": [
+      {"id": "hope-1", "meaning": "希望", "pos": "v.", "example": "I hope to understand more English.", "translation": "我希望能理解更多英语。", "prompt": "用 hope 写一句你对接下来一段时间的期待。", "hint": "I hope to ___."}
+    ]
+  },
+  {
+    "word": "remember", "phonetic": "/rɪˈmembə/", "level": "easy", "topic": "记忆",
+    "question": "有些小事过了很久你还记得，你觉得是什么让它们在记忆里留下来？",
+    "reflection": "你可以从当时的感受、场景或与某个人的联系中找线索。",
+    "senses": [
+      {"id": "remember-1", "meaning": "记得；记住", "pos": "v.", "example": "I remember my first English teacher.", "translation": "我记得我的第一位英语老师。", "prompt": "用 remember 写一句你记得的人、事或话。", "hint": "I remember ___."}
+    ]
+  },
+  {
+    "word": "forget", "phonetic": "/fəˈɡet/", "level": "easy", "topic": "学习",
+    "question": "刚学过的东西又忘记时，你希望自己用怎样的话回应这一次遗忘？",
+    "reflection": "你可以把这次遗忘当作信息，看看下次需要怎样的提醒。",
+    "senses": [
+      {"id": "forget-1", "meaning": "忘记", "pos": "v.", "example": "I sometimes forget new words.", "translation": "我有时会忘记新单词。", "prompt": "用 forget 写一句你容易忘记的事，可以真实地描述自己的情况。", "hint": "I sometimes forget ___."}
+    ]
+  },
+  {
+    "word": "grow", "phonetic": "/ɡrəʊ/", "level": "easy", "topic": "成长",
+    "question": "回头看一年前的自己，哪一点变化会让你觉得自己确实成长了一些？",
+    "reflection": "成长也可能藏在一次更清楚的表达，或一种新的应对方式里。",
+    "senses": [
+      {"id": "grow-1", "meaning": "成长；逐渐变得", "pos": "v.", "example": "I grow more confident with practice.", "translation": "随着练习，我变得更加自信。", "prompt": "用 grow 表示“逐渐变得”，写一句你练习某件事后的变化。", "hint": "I grow more ___ with practice."}
+    ]
+  },
+  {
+    "word": "pay", "phonetic": "/peɪ/", "level": "easy", "topic": "金钱",
+    "question": "你愿意花钱买一段怎样的体验，又希望这段体验在生活里留下什么？",
+    "reflection": "你可以比较购买时的期待和体验后的感受，看看自己看重什么。",
+    "senses": [
+      {"id": "pay-1", "meaning": "支付；付钱", "pos": "v.", "example": "I pay for my own books.", "translation": "我自己付钱买书。", "prompt": "用 pay for 写一句你愿意付费的东西或体验。", "hint": "I am happy to pay for ___."}
+    ]
+  },
+  {
+    "word": "spend", "phonetic": "/spend/", "level": "easy", "topic": "时间与金钱",
+    "question": "看一看最近一天的时间和金钱花去了哪里，它们与你重视的事情相近吗？",
+    "reflection": "你可以从一笔花费或一段时间开始观察，不必急着评价自己。",
+    "senses": [
+      {"id": "spend-1", "meaning": "花费时间", "pos": "v.", "example": "I spend ten minutes reading each day.", "translation": "我每天花十分钟阅读。", "prompt": "用 spend 表示“花费时间”，写一句你每天花多少时间做一件事。", "hint": "I spend ___ minutes ___ every day."},
+      {"id": "spend-2", "meaning": "花钱", "pos": "v.", "example": "I spend less money on snacks now.", "translation": "我现在买零食花的钱少了。", "prompt": "用 spend 表示“花钱”，写一句你愿意或不愿意在哪方面花钱。", "hint": "I spend money on ___."}
+    ]
+  },
+  {
+    "word": "save", "phonetic": "/seɪv/", "level": "core", "topic": "积累",
+    "question": "为了将来某件想做的事，你现在愿意留下一点什么，又不愿放弃什么？",
+    "reflection": "你可以试着为当下和将来各留一些空间，看看怎样更适合自己。",
+    "senses": [
+      {"id": "save-1", "meaning": "节省；储蓄", "pos": "v.", "example": "I save a little money every week.", "translation": "我每周存一点钱。", "prompt": "用 save 表示“储蓄或节省”，写一句你想节省的金钱或时间。", "hint": "I save ___ every week."},
+      {"id": "save-2", "meaning": "保存", "pos": "v.", "example": "I save useful notes on my phone.", "translation": "我把有用的笔记保存在手机里。", "prompt": "用 save 表示“保存”，写一句你保存什么以及存在哪里。", "hint": "I save ___ on my phone."}
+    ]
+  },
+  {
+    "word": "cost", "phonetic": "/kɒst/", "level": "core", "topic": "代价",
+    "question": "一件看起来免费的事，除了金钱之外还可能占用你的哪些东西？",
+    "reflection": "你可以把时间、注意力和精力也放进自己的考虑里。",
+    "senses": [
+      {"id": "cost-1", "meaning": "价钱为；使花费", "pos": "v.", "example": "The book costs twenty yuan.", "translation": "这本书售价二十元。", "prompt": "用 cost 写一句你买过的东西花了多少钱，注意单数主语后的形式。", "hint": "My ___ costs ___ yuan."},
+      {"id": "cost-2", "meaning": "成本；代价", "pos": "n.", "example": "I think about the cost of my choice.", "translation": "我会考虑自己选择的代价。", "prompt": "用 cost 表示“代价”，写一句你考虑某个选择时看重的成本。", "hint": "The cost of ___ is high."}
+    ]
+  },
+  {
+    "word": "choice", "phonetic": "/tʃɔɪs/", "level": "core", "topic": "选择",
+    "question": "选择很多的时候，你通常更容易感到自由，还是更需要一个筛选标准？",
+    "reflection": "你可以回忆一次难以决定的时刻，看看哪条标准最终帮到了你。",
+    "senses": [
+      {"id": "choice-1", "meaning": "选择；可选的事物", "pos": "n.", "example": "A short walk is a good choice for me.", "translation": "对我来说，短暂散步是个好选择。", "prompt": "用 choice 写一句适合你的选择，并可补充一个简单理由。", "hint": "___ is a good choice for me."}
+    ]
+  },
+  {
+    "word": "habit", "phonetic": "/ˈhæbɪt/", "level": "core", "topic": "习惯",
+    "question": "如果一种习惯总在你没留意的时候发生，你会从哪个瞬间开始观察它？",
+    "reflection": "你可以留意它发生前的地点、心情或动作，先认识这个习惯。",
+    "senses": [
+      {"id": "habit-1", "meaning": "习惯", "pos": "n.", "example": "Reading before bed is my new habit.", "translation": "睡前阅读是我的新习惯。", "prompt": "用 habit 写一句你已有或想建立的习惯。", "hint": "___ is my new habit."}
+    ]
+  },
+  {
+    "word": "value", "phonetic": "/ˈvæljuː/", "level": "core", "topic": "价值",
+    "question": "一样东西的价格和它对你的意义不一致时，你会用什么判断它的价值？",
+    "reflection": "你可以想想某件不贵却舍不得丢的东西，它也许带着独特的意义。",
+    "senses": [
+      {"id": "value-1", "meaning": "价值", "pos": "n.", "example": "This old photo has great value to me.", "translation": "这张老照片对我有很大的价值。", "prompt": "用 value 表示“价值”，写一句对你有特殊价值的东西。", "hint": "___ has great value to me."},
+      {"id": "value-2", "meaning": "重视；珍视", "pos": "v.", "example": "I value time with my family.", "translation": "我珍视与家人相处的时间。", "prompt": "用 value 表示“重视”，写一句你珍视的人、事或品质。", "hint": "I value ___."}
+    ]
+  },
+  {
+    "word": "mean", "phonetic": "/miːn/", "level": "core", "topic": "表达",
+    "question": "同一句话被不同的人听见时，为什么有时会留下完全不同的感受？",
+    "reflection": "你可以想想语气、背景和各自的经历怎样影响对一句话的理解。",
+    "senses": [
+      {"id": "mean-1", "meaning": "意思是；意味着", "pos": "v.", "example": "Success means different things to us.", "translation": "成功对我们意味着不同的事。", "prompt": "用 mean 表示“意味着”，写一句自由、友谊或成功对你意味着什么。", "hint": "___ means ___ to me."},
+      {"id": "mean-2", "meaning": "打算；有意", "pos": "v.", "example": "I mean to start with one small step.", "translation": "我打算从小小的一步开始。", "prompt": "用 mean to 表示“打算”，写一句你打算做的事。", "hint": "I mean to ___."}
+    ]
+  },
+  {
+    "word": "mind", "phonetic": "/maɪnd/", "level": "core", "topic": "思考",
+    "question": "当脑子里同时有很多想法时，你会怎样让自己听清此刻最在意的那个？",
+    "reflection": "你可以试试把想法写下来，再看看哪些还需要继续思考。",
+    "senses": [
+      {"id": "mind-1", "meaning": "头脑；心思", "pos": "n.", "example": "A walk helps clear my mind.", "translation": "散步有助于我理清思绪。", "prompt": "用 mind 表示“头脑或心思”，写一句能帮助你理清思绪的活动。", "hint": "___ helps clear my mind."},
+      {"id": "mind-2", "meaning": "介意", "pos": "v.", "example": "I do not mind asking for help.", "translation": "我不介意寻求帮助。", "prompt": "用 mind 表示“介意”，写一句你不介意做的事。", "hint": "I do not mind ___."}
+    ]
+  },
+  {
+    "word": "sense", "phonetic": "/sens/", "level": "core", "topic": "理解",
+    "question": "有些话听起来很深刻，却让你难以说明具体意思，你会怎样继续理解？",
+    "reflection": "你可以试着找一个生活例子，看看这句话是否能说得更清楚。",
+    "senses": [
+      {"id": "sense-1", "meaning": "意义；道理", "pos": "n.", "example": "This advice makes sense to me.", "translation": "我觉得这个建议有道理。", "prompt": "用 make sense 表示“有道理”，写一句你觉得有道理的建议或做法。", "hint": "___ makes sense to me."},
+      {"id": "sense-2", "meaning": "感觉；意识", "pos": "n.", "example": "Finishing a task gives me a sense of progress.", "translation": "完成一项任务让我有进步的感觉。", "prompt": "用 a sense of 表示“某种感觉”，写一句某件事带给你的感受。", "hint": "___ gives me a sense of ___."}
+    ]
+  },
+  {
+    "word": "present", "phonetic": "/ˈprezənt/", "level": "core", "topic": "当下",
+    "question": "当你一边做眼前的事一边想着以后时，什么会让你重新注意到此刻？",
+    "reflection": "你可以留意一个声音或一个动作，看看自己怎样回到正在发生的事。",
+    "senses": [
+      {"id": "present-1", "meaning": "现在的；当前的", "pos": "adj.", "example": "My present goal is to learn five words.", "translation": "我目前的目标是学五个单词。", "prompt": "用 present 表示“当前的”，写一句你目前的目标或计划。", "hint": "My present goal is to ___."},
+      {"id": "present-2", "meaning": "礼物", "pos": "n.", "example": "I made a small present for my friend.", "translation": "我给朋友做了一份小礼物。", "prompt": "用 present 表示“礼物”，写一句你想送或收到过的礼物。", "hint": "I want to give ___ a present."},
+      {"id": "present-3", "meaning": "在场的；出席的", "pos": "adj.", "example": "All my friends were present at the party.", "translation": "我的朋友们都出席了聚会。", "prompt": "用 present 表示“在场的”，写一句你出席过的课堂、活动或聚会。", "hint": "I was present at ___."}
+    ]
+  },
+  {
+    "word": "order", "phonetic": "/ˈɔːdə/", "level": "core", "topic": "安排",
+    "question": "一天里有很多事等着你做时，你会按什么顺序安排它们才觉得踏实？",
+    "reflection": "你可以比较重要程度、紧急程度和当时的精力，再尝试一种安排。",
+    "senses": [
+      {"id": "order-1", "meaning": "顺序；秩序", "pos": "n.", "example": "I put my tasks in order.", "translation": "我把自己的任务排好顺序。", "prompt": "用 order 表示“顺序或秩序”，写一句你如何整理物品或安排任务。", "hint": "I put ___ in order."},
+      {"id": "order-2", "meaning": "点餐；订购", "pos": "v.", "example": "I order tea when I meet my friends.", "translation": "我和朋友见面时会点茶。", "prompt": "用 order 表示“点餐或订购”，写一句你平时会点什么或订购什么。", "hint": "I usually order ___."}
+    ]
+  },
+  {
+    "word": "light", "phonetic": "/laɪt/", "level": "core", "topic": "感受",
+    "question": "同一个地方在不同光线下，会让你产生不同的心情和生活感受吗？",
+    "reflection": "你可以回忆一个熟悉的角落，看看光线怎样影响你对它的感觉。",
+    "senses": [
+      {"id": "light-1", "meaning": "光；光线", "pos": "n.", "example": "I like the soft light in this room.", "translation": "我喜欢这个房间里柔和的光线。", "prompt": "用 light 表示“光线”，写一句你喜欢的光或光线带来的感受。", "hint": "I like the ___ light ___."},
+      {"id": "light-2", "meaning": "轻的", "pos": "adj.", "example": "My bag is light today.", "translation": "我的包今天很轻。", "prompt": "用 light 表示“轻的”，写一句你常用的一件物品。", "hint": "My ___ is light."}
+    ]
+  },
+  {
+    "word": "matter", "phonetic": "/ˈmætə/", "level": "core", "topic": "重要的事",
+    "question": "当一天快要结束时，哪些事情是否完成，最会影响你对这一天的感受？",
+    "reflection": "你可以看看真正牵动自己的事情，是否已经得到了合适的关注。",
+    "senses": [
+      {"id": "matter-1", "meaning": "要紧；有关系", "pos": "v.", "example": "Your feelings matter to me.", "translation": "我在意你的感受。", "prompt": "用 matter 表示“重要或要紧”，写一句什么对你重要。", "hint": "___ matters to me."},
+      {"id": "matter-2", "meaning": "事情；问题", "pos": "n.", "example": "We can discuss this matter tomorrow.", "translation": "我们可以明天讨论这件事。", "prompt": "用 matter 表示“事情”，写一句你想如何处理一件事。", "hint": "I want to discuss this matter with ___."}
+    ]
+  },
+  {
+    "word": "trust", "phonetic": "/trʌst/", "level": "core", "topic": "信任",
+    "question": "你开始信任一个人时，通常是因为他说过什么，还是因为他做过什么？",
+    "reflection": "你可以回忆一次信任逐渐建立的过程，看看哪些细节发挥了作用。",
+    "senses": [
+      {"id": "trust-1", "meaning": "信任；相信", "pos": "v.", "example": "I trust my friend to keep a promise.", "translation": "我相信朋友会遵守承诺。", "prompt": "用 trust 写一句你信任谁，以及相信他能做什么。", "hint": "I trust ___ to ___."}
+    ]
+  },
+  {
+    "word": "focus", "phonetic": "/ˈfəʊkəs/", "level": "core", "topic": "注意力",
+    "question": "当手机上有许多内容同时吸引你时，什么能帮助你守住原本想做的事？",
+    "reflection": "你可以先找一个最容易分心的瞬间，再尝试一个小小的调整。",
+    "senses": [
+      {"id": "focus-1", "meaning": "集中注意力", "pos": "v.", "example": "I focus on one word at a time.", "translation": "我一次专注于一个单词。", "prompt": "用 focus on 写一句你想集中注意力做的事。", "hint": "I want to focus on ___."}
+    ]
+  },
+  {
+    "word": "attention", "phonetic": "/əˈtenʃən/", "level": "core", "topic": "注意力",
+    "question": "如果注意力也有一天的预算，你最愿意把它留给哪些人和哪些事情？",
+    "reflection": "你可以观察今天最常注意到什么，再看看是否想作一点调整。",
+    "senses": [
+      {"id": "attention-1", "meaning": "注意；注意力", "pos": "n.", "example": "I pay attention to the sound of each word.", "translation": "我注意每个单词的发音。", "prompt": "用 pay attention to 写一句你想多留意的细节。", "hint": "I pay attention to ___."}
+    ]
+  },
+  {
+    "word": "notice", "phonetic": "/ˈnəʊtɪs/", "level": "core", "topic": "观察",
+    "question": "走过一条很熟悉的路时，你会怎样发现平常容易被自己忽略的小变化？",
+    "reflection": "你可以试着放慢一点，留意一个之前没有认真看过的细节。",
+    "senses": [
+      {"id": "notice-1", "meaning": "注意到；察觉", "pos": "v.", "example": "I notice small changes in my mood.", "translation": "我会注意到自己心情的细微变化。", "prompt": "用 notice 写一句你最近注意到的一个细节或变化。", "hint": "I notice ___ when I ___."},
+      {"id": "notice-2", "meaning": "通知；告示", "pos": "n.", "example": "I read the notice before class.", "translation": "我上课前读了通知。", "prompt": "用 notice 表示“通知或告示”，写一句你在哪里看到通知。", "hint": "I saw a notice ___."}
+    ]
+  },
+  {
+    "word": "decide", "phonetic": "/dɪˈsaɪd/", "level": "core", "topic": "决定",
+    "question": "一件事迟迟决定不下来时，你最想先弄清哪一条尚不确定的信息？",
+    "reflection": "你可以区分还能查清的部分，和需要自己承担的不确定。",
+    "senses": [
+      {"id": "decide-1", "meaning": "决定", "pos": "v.", "example": "I decide to put my phone away.", "translation": "我决定把手机收起来。", "prompt": "用 decide 写一句你现在决定采取的行动。", "hint": "I decide to ___."}
+    ]
+  },
+  {
+    "word": "reason", "phonetic": "/ˈriːzən/", "level": "core", "topic": "思考",
+    "question": "当你解释自己为什么做一件事时，哪一种理由最接近当时真实的想法？",
+    "reflection": "你可以允许自己有多个理由，再看看其中哪一个最有分量。",
+    "senses": [
+      {"id": "reason-1", "meaning": "原因；理由", "pos": "n.", "example": "My reason for learning English is simple.", "translation": "我学习英语的理由很简单。", "prompt": "用 reason 写一句你学习英语或坚持某件事的理由。", "hint": "My reason for ___ is ___."}
+    ]
+  },
+  {
+    "word": "chance", "phonetic": "/tʃɑːns/", "level": "core", "topic": "机会",
+    "question": "遇到一个新的机会时，你会怎样判断它是否值得占用现有生活的一部分？",
+    "reflection": "你可以想想它带来的可能性，也看看自己需要为它留出什么。",
+    "senses": [
+      {"id": "chance-1", "meaning": "机会", "pos": "n.", "example": "I want a chance to try again.", "translation": "我想要一次再试的机会。", "prompt": "用 chance 表示“机会”，写一句你想获得怎样的机会。", "hint": "I want a chance to ___."},
+      {"id": "chance-2", "meaning": "可能性", "pos": "n.", "example": "There is a chance of rain today.", "translation": "今天有可能下雨。", "prompt": "用 chance 表示“可能性”，写一句接下来有可能发生的事。", "hint": "There is a chance that I will ___."}
+    ]
+  },
+  {
+    "word": "risk", "phonetic": "/rɪsk/", "level": "core", "topic": "风险",
+    "question": "一件值得尝试的事也可能失败时，你会怎样判断自己能够承担的风险？",
+    "reflection": "你可以先想清楚最担心的结果，以及出现后有哪些应对办法。",
+    "senses": [
+      {"id": "risk-1", "meaning": "风险；危险", "pos": "n.", "example": "I think about the risk before I act.", "translation": "我行动前会考虑风险。", "prompt": "用 risk 写一句你尝试某件事时愿意考虑或承担的风险。", "hint": "I think about the risk of ___."}
+    ]
+  },
+  {
+    "word": "fear", "phonetic": "/fɪə/", "level": "core", "topic": "情绪",
+    "question": "当害怕让你停下脚步时，你会怎样分辨真实的危险和脑海里的想象？",
+    "reflection": "你可以先说清楚害怕的具体结果，再看看有哪些信息能帮助判断。",
+    "senses": [
+      {"id": "fear-1", "meaning": "害怕；恐惧", "pos": "n.", "example": "I have a fear of speaking in public.", "translation": "我害怕在公众面前讲话。", "prompt": "用 fear 表示“害怕”，写一句你愿意表达的小担忧。", "hint": "I have a fear of ___."}
+    ]
+  },
+  {
+    "word": "fail", "phonetic": "/feɪl/", "level": "core", "topic": "挫折",
+    "question": "一次尝试没有得到想要的结果时，怎样的复盘会让你愿意再往前走？",
+    "reflection": "你可以分别看看目标、方法和当时的条件，而不只给自己一个评价。",
+    "senses": [
+      {"id": "fail-1", "meaning": "失败；未能做到", "pos": "v.", "example": "If I fail today, I can try again tomorrow.", "translation": "如果今天失败了，我明天可以再试。", "prompt": "用 fail 写一句如果一次尝试失败，你打算怎样回应。", "hint": "If I fail, I will ___."}
+    ]
+  },
+  {
+    "word": "honest", "phonetic": "/ˈɒnɪst/", "level": "core", "topic": "真诚",
+    "question": "当真实想法可能让别人失望时，你会怎样找到自己愿意采用的表达方式？",
+    "reflection": "你可以同时考虑表达的内容、语气，以及双方需要了解的事情。",
+    "senses": [
+      {"id": "honest-1", "meaning": "诚实的；坦诚的", "pos": "adj.", "example": "I want to be honest about my feelings.", "translation": "我想坦诚表达自己的感受。", "prompt": "用 honest 写一句你希望在哪方面对自己或别人保持坦诚。", "hint": "I want to be honest about ___."}
+    ]
+  },
+  {
+    "word": "fair", "phonetic": "/feə/", "level": "core", "topic": "公平",
+    "question": "几个人的需要和付出都不一样时，怎样的分配才会让你觉得比较公平？",
+    "reflection": "你可以试着从不同人的位置看同一次分配，比较各自的理由。",
+    "senses": [
+      {"id": "fair-1", "meaning": "公平的；公正的", "pos": "adj.", "example": "I think this rule is fair.", "translation": "我认为这条规则是公平的。", "prompt": "用 fair 写一句你认为公平的规则、安排或做法。", "hint": "I think ___ is fair."}
+    ]
+  },
+  {
+    "word": "respect", "phonetic": "/rɪˈspekt/", "level": "core", "topic": "关系",
+    "question": "当朋友的选择和你的想法很不一样时，你会怎样表达自己的意见和尊重？",
+    "reflection": "你可以想想怎样既说清自己的看法，也给对方留下回应的空间。",
+    "senses": [
+      {"id": "respect-1", "meaning": "尊重", "pos": "v.", "example": "I respect my friend's choice.", "translation": "我尊重朋友的选择。", "prompt": "用 respect 写一句你愿意尊重谁的选择、感受或时间。", "hint": "I respect ___."}
+    ]
+  },
+  {
+    "word": "patient", "phonetic": "/ˈpeɪʃənt/", "level": "core", "topic": "耐心",
+    "question": "如果一个变化比预想中来得慢，你会依据什么决定继续等待还是调整方法？",
+    "reflection": "你可以看看已经出现的小变化，也给下一次检查设一个时间。",
+    "senses": [
+      {"id": "patient-1", "meaning": "有耐心的", "pos": "adj.", "example": "I am patient with myself when I learn.", "translation": "学习时，我对自己有耐心。", "prompt": "用 patient 表示“有耐心的”，写一句你想怎样对待自己或别人。", "hint": "I want to be patient with ___."},
+      {"id": "patient-2", "meaning": "病人", "pos": "n.", "example": "The nurse listens to each patient.", "translation": "护士倾听每一位病人的话。", "prompt": "用 patient 表示“病人”，写一句你希望病人能得到怎样的帮助或照顾。", "hint": "I hope each patient can ___."}
+    ]
+  },
+  {
+    "word": "accept", "phonetic": "/əkˈsept/", "level": "core", "topic": "接纳",
+    "question": "承认自己暂时不会一件事以后，怎样的下一步会让你感觉仍有选择？",
+    "reflection": "你可以先描述眼下的情况，再决定希望从哪里开始尝试。",
+    "senses": [
+      {"id": "accept-1", "meaning": "接受；认可", "pos": "v.", "example": "I accept that learning takes time.", "translation": "我接受学习需要时间这一点。", "prompt": "用 accept 写一句你愿意接受的现实情况或帮助。", "hint": "I accept that ___."}
+    ]
+  },
+  {
+    "word": "balance", "phonetic": "/ˈbæləns/", "level": "core", "topic": "平衡",
+    "question": "当学习、休息和陪伴都需要时间时，怎样的安排会让你觉得比较平衡？",
+    "reflection": "你可以先照顾今天最迫切的需要，再观察这一周的整体安排。",
+    "senses": [
+      {"id": "balance-1", "meaning": "平衡；均衡", "pos": "n.", "example": "I need a balance between study and rest.", "translation": "我需要在学习与休息之间找到平衡。", "prompt": "用 balance 表示“平衡”，写一句你想平衡生活中的哪两件事。", "hint": "I need a balance between ___ and ___."},
+      {"id": "balance-2", "meaning": "兼顾；使平衡", "pos": "v.", "example": "I try to balance my work and my hobbies.", "translation": "我试着兼顾工作与爱好。", "prompt": "用 balance 表示“兼顾”，写一句你想同时安排好的两件事。", "hint": "I try to balance ___ and ___."}
+    ]
+  },
+  {
+    "word": "purpose", "phonetic": "/ˈpɜːpəs/", "level": "core", "topic": "目标",
+    "question": "做一件事的热情渐渐减少时，最初的目的对你还有多少吸引力和意义？",
+    "reflection": "你可以重新看看当初为什么开始，也允许自己的目的慢慢变化。",
+    "senses": [
+      {"id": "purpose-1", "meaning": "目的；意图", "pos": "n.", "example": "The purpose of my plan is to learn a little each day.", "translation": "我的计划旨在每天学一点。", "prompt": "用 purpose 写一句你制定某个计划或做某件事的目的。", "hint": "The purpose of my ___ is to ___."}
+    ]
+  },
+  {
+    "word": "success", "phonetic": "/səkˈses/", "level": "core", "topic": "成长",
+    "question": "如果暂时放下与别人的比较，你会用哪些具体变化判断自己取得了成功？",
+    "reflection": "你可以为这一周选一个自己的衡量标准，再看看它是否真的重要。",
+    "senses": [
+      {"id": "success-1", "meaning": "成功；成就", "pos": "n.", "example": "For me, success means making steady progress.", "translation": "对我来说，成功意味着稳步进步。", "prompt": "用 success 写一句现阶段的成功对你意味着什么。", "hint": "For me, success means ___."}
+    ]
+  }
+]
