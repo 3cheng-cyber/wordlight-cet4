@@ -16,6 +16,12 @@ export function daysBetween(a:string,b:string){return dayNumber(b)-dayNumber(a)}
 export function initialState():State{return {version:1,settings:{minutes:5,exam:'2026-12-12',reminder:'20:30',newLimit:10,remindEnabled:false,voiceFeedback:true,motion:true},readingProgress:{},progress:{},attempts:[],daily:{},lastStudyDate:'',recovery:null,session:null}}
 export function progressKey(word:string,senseId:string,skill:Skill){return `${word}|${senseId}|${skill}`}
 export function daily(state:State,now=Date.now()):Daily{const key=dateKey(now);return state.daily[key]??(state.daily[key]={seconds:0,read:0,listen:0,sentences:0,completed:0,words:[]})}
+// A timer tick changes only counters; keep the growing sentence/progress history shared.
+export function advanceStudySecond(state:State,now=Date.now()):State{
+ if(!state.session)return state;
+ const key=dateKey(now);const day=state.daily[key]||{seconds:0,read:0,listen:0,sentences:0,completed:0,words:[]};
+ return {...state,session:{...state.session,seconds:state.session.seconds+1},daily:{...state.daily,[key]:{...day,seconds:day.seconds+1}}};
+}
 export function touch(state:State,word:string,now=Date.now()){state.lastStudyDate=dateKey(now);const d=daily(state,now);if(!d.words.includes(word))d.words.push(word)}
 export function schedule(state:State,word:string,senseId:string,skill:Skill,success:boolean,now=Date.now()){
  const key=progressKey(word,senseId,skill);const old=state.progress[key]??{level:0,due:now,last:0,correct:0,wrong:0};
