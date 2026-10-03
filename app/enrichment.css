@@ -9,3 +9,4 @@
 @media(max-width:760px){.bottom-nav button{font-size:14px}.feedback-words span{font-size:14px}.family-word>p{font-size:14px}}
 
 .warmup-intro{padding-top:4px}.warmup-tip{padding:14px 16px;border-radius:12px;background:#eef4e9;color:#426052;font-size:14px;line-height:1.7;margin:16px 0}.warmup-intro>small{display:block;margin-top:12px;line-height:1.6}
+.family-definitions{margin:10px 0 12px;font-size:13px;color:#54674d}.family-definitions summary{cursor:pointer;line-height:1.7}.family-definitions p{font:16px/1.75 Georgia,serif;overflow-wrap:anywhere;margin:10px 0}.family-definitions small{font-size:11px;line-height:1.7;display:block;color:#75816d}

@@ -1,0 +1,102 @@
+{
+  "oewn-willing__1.04.00..": {
+    "meaning": "选择行为",
+    "definition": "the act of making a choice"
+  },
+  "oewn-knowing__1.09.00..": {
+    "meaning": "确切的认识",
+    "definition": "a clear and certain mental apprehension"
+  },
+  "oewn-telling__1.10.00..": {
+    "meaning": "告知",
+    "definition": "informing by words"
+  },
+  "oewn-telling__1.10.01..": {
+    "meaning": "讲述",
+    "definition": "an act of narration"
+  },
+  "oewn-telling__1.10.03..": {
+    "meaning": "告发；提供有关他人的信息",
+    "definition": "disclosing information or giving evidence about another"
+  },
+  "oewn-using__1.04.00..": {
+    "meaning": "利用（不公平地对待他人）",
+    "definition": "an act that exploits or victimizes someone (treats them unfairly)"
+  },
+  "oewn-dying__1.28.00..": {
+    "meaning": "生命或事物终结之时",
+    "definition": "the time when something ends"
+  },
+  "oewn-raising__1.07.00..": {
+    "meaning": "教养",
+    "definition": "the properties acquired as a consequence of the way you were treated as a child"
+  },
+  "oewn-raising__1.11.00..": {
+    "meaning": "升高；抬升",
+    "definition": "the event of something being raised upward"
+  },
+  "oewn-studying__1.10.01..": {
+    "meaning": "研读",
+    "definition": "reading carefully with intent to remember"
+  },
+  "oewn-finder__1.18.00..": {
+    "meaning": "最先发现某事物的人",
+    "definition": "someone who is the first to observe something"
+  },
+  "oewn-finder__1.18.01..": {
+    "meaning": "寻找后发现某事物的人",
+    "definition": "someone who comes upon something after searching"
+  },
+  "oewn-founding__1.04.00..": {
+    "meaning": "创立；创办",
+    "definition": "the act of starting something for the first time; introducing something new"
+  },
+  "oewn-questioning__1.10.00..": {
+    "meaning": "询问；提问",
+    "definition": "a request for information"
+  },
+  "oewn-buying__1.04.00..": {
+    "meaning": "购买",
+    "definition": "the act of buying"
+  },
+  "oewn-selling__1.04.00..": {
+    "meaning": "出售",
+    "definition": "the exchange of goods for an agreed sum of money"
+  },
+  "oewn-supporting__1.04.00..": {
+    "meaning": "支撑；加固",
+    "definition": "the act of bearing the weight of or strengthening"
+  },
+  "oewn-watching__1.04.00..": {
+    "meaning": "观察；观看",
+    "definition": "the act of observing; taking a patient look"
+  },
+  "oewn-caring__1.12.01..": {
+    "meaning": "爱护之情",
+    "definition": "a loving feeling"
+  },
+  "oewn-sorting__1.04.00..": {
+    "meaning": "按类别或大小分组",
+    "definition": "grouping by class or kind or size"
+  },
+  "oewn-sorting__1.22.00..": {
+    "meaning": "按指定标准分类",
+    "definition": "an operation that segregates items into groups according to a specified criterion"
+  },
+  "oewn-processing__1.22.00..": {
+    "meaning": "处理；加工",
+    "definition": "preparing or putting through a prescribed procedure"
+  },
+  "oewn-deciding__1.09.00..": {
+    "meaning": "作出决定的思考过程",
+    "definition": "the cognitive process of reaching a decision"
+  },
+  "oewn-letter__1.18.00..": {
+    "meaning": "出租人",
+    "definition": "owner who lets another person use something (housing usually) for hire"
+  },
+  "oewn-serving__1.13.00..": {
+    "meaning": "一份食物或饮料",
+    "definition": "an individual quantity of food or drink taken as part of a meal"
+  }
+}

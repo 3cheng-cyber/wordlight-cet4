@@ -43,11 +43,131 @@
       "family": 243,
       "pertainym": 1474
     },
-    "missingChineseEntries": 0,
+    "missingChineseEntries": 720,
     "curatedGroups": 27,
-    "allDerivationsExhaustive": false
+    "allDerivationsExhaustive": false,
+    "senseReviewedEntries": 20,
+    "meaningAudit": {
+      "dictionary-pos": 6664,
+      "sense-reviewed": 20,
+      "preserved-editorial": 358,
+      "english-reference": 720
+    }
   },
   "method": "OEWN 2025 逐义项 derivation / pertainym 直接关联（双向索引），不作图传递闭包；27 组有限常用词族人工补充。ECDICT 中文释义与词形；中文短释义不是义项对齐的完整译文。",
   "missingText": "该参考库暂未收录",
-  "notice": "优先展示常用同族词；其余为参考库记录的直接关联，可能包含拓展词。词族未穷尽，中文短释义不代表全部义项。时态、分词、比较级和复数另列。"
+  "notice": "优先展示常用同族词；其余为参考库记录的直接关联，可能包含拓展词。词族未穷尽，中文短释义不代表全部义项。时态、分词、比较级和复数另列。",
+  "meaningAudit": {
+    "date": "2026-10-03",
+    "counts": {
+      "dictionary-pos": 6664,
+      "sense-reviewed": 20,
+      "preserved-editorial": 358,
+      "english-reference": 720
+    },
+    "method": "保留已有人工词族；其余中文必须有匹配词性。缺少可靠对应时不套用其他词性的释义，展示目标义项的 OEWN 英文定义。少量常见易混词依据确切目标义项人工修订。",
+    "limitation": "匹配词性不等于所有中文已逐义项人工核对。本轮修正词性回退和指定常见义项，未声称完成全库语义审校。",
+    "corrections": {
+      "oewn-willing__1.04.00..": {
+        "meaning": "选择行为",
+        "definition": "the act of making a choice"
+      },
+      "oewn-knowing__1.09.00..": {
+        "meaning": "确切的认识",
+        "definition": "a clear and certain mental apprehension"
+      },
+      "oewn-telling__1.10.00..": {
+        "meaning": "告知",
+        "definition": "informing by words"
+      },
+      "oewn-telling__1.10.01..": {
+        "meaning": "讲述",
+        "definition": "an act of narration"
+      },
+      "oewn-telling__1.10.03..": {
+        "meaning": "告发；提供有关他人的信息",
+        "definition": "disclosing information or giving evidence about another"
+      },
+      "oewn-using__1.04.00..": {
+        "meaning": "利用（不公平地对待他人）",
+        "definition": "an act that exploits or victimizes someone (treats them unfairly)"
+      },
+      "oewn-dying__1.28.00..": {
+        "meaning": "生命或事物终结之时",
+        "definition": "the time when something ends"
+      },
+      "oewn-raising__1.07.00..": {
+        "meaning": "教养",
+        "definition": "the properties acquired as a consequence of the way you were treated as a child"
+      },
+      "oewn-raising__1.11.00..": {
+        "meaning": "升高；抬升",
+        "definition": "the event of something being raised upward"
+      },
+      "oewn-studying__1.10.01..": {
+        "meaning": "研读",
+        "definition": "reading carefully with intent to remember"
+      },
+      "oewn-finder__1.18.00..": {
+        "meaning": "最先发现某事物的人",
+        "definition": "someone who is the first to observe something"
+      },
+      "oewn-finder__1.18.01..": {
+        "meaning": "寻找后发现某事物的人",
+        "definition": "someone who comes upon something after searching"
+      },
+      "oewn-founding__1.04.00..": {
+        "meaning": "创立；创办",
+        "definition": "the act of starting something for the first time; introducing something new"
+      },
+      "oewn-questioning__1.10.00..": {
+        "meaning": "询问；提问",
+        "definition": "a request for information"
+      },
+      "oewn-buying__1.04.00..": {
+        "meaning": "购买",
+        "definition": "the act of buying"
+      },
+      "oewn-selling__1.04.00..": {
+        "meaning": "出售",
+        "definition": "the exchange of goods for an agreed sum of money"
+      },
+      "oewn-supporting__1.04.00..": {
+        "meaning": "支撑；加固",
+        "definition": "the act of bearing the weight of or strengthening"
+      },
+      "oewn-watching__1.04.00..": {
+        "meaning": "观察；观看",
+        "definition": "the act of observing; taking a patient look"
+      },
+      "oewn-caring__1.12.01..": {
+        "meaning": "爱护之情",
+        "definition": "a loving feeling"
+      },
+      "oewn-sorting__1.04.00..": {
+        "meaning": "按类别或大小分组",
+        "definition": "grouping by class or kind or size"
+      },
+      "oewn-sorting__1.22.00..": {
+        "meaning": "按指定标准分类",
+        "definition": "an operation that segregates items into groups according to a specified criterion"
+      },
+      "oewn-processing__1.22.00..": {
+        "meaning": "处理；加工",
+        "definition": "preparing or putting through a prescribed procedure"
+      },
+      "oewn-deciding__1.09.00..": {
+        "meaning": "作出决定的思考过程",
+        "definition": "the cognitive process of reaching a decision"
+      },
+      "oewn-letter__1.18.00..": {
+        "meaning": "出租人",
+        "definition": "owner who lets another person use something (housing usually) for hire"
+      },
+      "oewn-serving__1.13.00..": {
+        "meaning": "一份食物或饮料",
+        "definition": "an individual quantity of food or drink taken as part of a meal"
+      }
+    }
+  }
 }

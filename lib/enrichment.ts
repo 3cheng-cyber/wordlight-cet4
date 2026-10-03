@@ -2,7 +2,7 @@ export type FeedbackKind = 'correct' | 'wrong' | 'unanswered' | 'saved' | 'compl
 export type ReadingProgress = {answer?:number; attempts:number; correct:boolean; draft:string; completedOn?:string;practicedOn?:string};
 export type Reading = {id:string;title:string;titleEn:string;theme:string;paragraphs:{en:string;zh:string}[];keywords:{word:string;meaning:string}[];question:{question:string;options:string[];answerIndex:number;explanation:string};writingPrompt:string;phrase:{phrase:string;translation:string}};
 export type ReadingCollection = {readings:Reading[];encouragements:{en:string;zh:string}[]};
-export type FamilyEntry = {word:string;pos:string;meaning:string;relation:string;inVocabulary:boolean;label?:string;group?:string};
+export type FamilyEntry = {word:string;pos:string;meaning:string;relation:string;inVocabulary:boolean;label?:string;group?:string;meaningStatus?:'sense-reviewed'|'english-reference';englishDefinitions?:{senseId:string;definition:string}[]};
 export type Family = {derivatives:FamilyEntry[];inflections:{word:string;label:string}[];note?:string};
 export type FamilyCollection = {index:Record<string,Family>;coverage:Record<string,unknown>;missingText:string};
 
